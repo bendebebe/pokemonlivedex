@@ -124,26 +124,26 @@
     </div>
 
     <!-- Mobile Tab Bar -->
-    <div id="mobile-tab-bar" class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 z-50 hidden">
-        <div class="flex justify-around">
-            <button data-tab="areas" onclick="showMobileTab('areas')" class="flex-1 py-3 flex flex-col items-center text-gray-500">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div id="mobile-tab-bar" class="fixed bottom-0 left-0 right-0 w-full bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 z-50 hidden" style="padding-bottom: env(safe-area-inset-bottom, 8px);">
+        <div class="w-full grid grid-cols-3 py-3">
+            <button data-tab="areas" onclick="showMobileTab('areas')" class="py-2 flex flex-col items-center justify-center text-gray-500 gap-2">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                 </svg>
-                <span class="text-xs mt-1">Areas</span>
+                <span class="text-sm">Areas</span>
             </button>
-            <button data-tab="tracker" onclick="showMobileTab('tracker')" class="flex-1 py-3 flex flex-col items-center text-pokemon-blue border-t-2 border-pokemon-blue">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button data-tab="tracker" onclick="showMobileTab('tracker')" class="py-2 flex flex-col items-center justify-center text-pokemon-blue gap-2">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
-                <span class="text-xs mt-1">Tracker</span>
+                <span class="text-sm font-medium">Tracker</span>
             </button>
-            <button data-tab="pc" onclick="showMobileTab('pc')" class="flex-1 py-3 flex flex-col items-center text-gray-500">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <button data-tab="pc" onclick="showMobileTab('pc')" class="py-2 flex flex-col items-center justify-center text-gray-500 gap-2">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                     <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
                     <circle cx="12" cy="12" r="3" fill="currentColor"/>
                 </svg>
-                <span class="text-xs mt-1">PC Box</span>
+                <span class="text-sm">PC Box</span>
             </button>
         </div>
     </div>

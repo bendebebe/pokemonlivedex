@@ -119,6 +119,65 @@
         height: calc(100vh - 140px);
     }
     
+    /* Fixed height area card on mobile */
+    .area-slide {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+    
+    .area-card-inner {
+        max-height: calc(100vh - 220px);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Method content area - horizontal scroll */
+    [id^="method-content-"] {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        max-height: calc(100vh - 350px);
+    }
+    
+    [class*="method-content-"] {
+        min-height: auto !important;
+    }
+    
+    /* Smaller Pokemon cards on mobile */
+    .pokemon-card {
+        padding: 0.5rem !important;
+        width: 85px !important;
+        flex-shrink: 0;
+    }
+    .pokemon-card .sprite-hover {
+        margin-top: 0 !important;
+    }
+    .pokemon-card img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .pokemon-card .text-sm {
+        font-size: 0.65rem !important;
+        margin-top: 0.25rem !important;
+    }
+    .pokemon-card .text-xs {
+        font-size: 0.55rem !important;
+        padding: 0.125rem 0.25rem !important;
+    }
+    .pokemon-card .flex-wrap {
+        gap: 0.125rem !important;
+        margin-top: 0.25rem !important;
+    }
+    
+    /* Hide catch count badge on mobile - too cramped */
+    .pokemon-card > .absolute {
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 0.6rem !important;
+        top: -4px !important;
+        right: -4px !important;
+    }
+    
     /* Full screen mobile views */
     #mobile-areas-view,
     #mobile-pc-view {
@@ -145,4 +204,9 @@
     #mobile-pc-view {
         display: none !important;
     }
+}
+
+/* Safe area for iPhone notch/home indicator */
+.safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
 }

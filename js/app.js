@@ -57,11 +57,21 @@ function getStorageKey() {
     return `pokemonLiveDex_${gameId}_tracking`;
 }
 
+function getAreaIndexKey() {
+    return `pokemonLiveDex_${gameId}_areaIndex`;
+}
+
 // Load tracking state from localStorage
 function loadTrackingState() {
     const saved = localStorage.getItem(getStorageKey());
     if (saved) {
         trackingState = JSON.parse(saved);
+    }
+    
+    // Load last viewed area
+    const savedArea = localStorage.getItem(getAreaIndexKey());
+    if (savedArea) {
+        currentAreaIndex = parseInt(savedArea, 10) || 0;
     }
 }
 
@@ -69,6 +79,12 @@ function loadTrackingState() {
 function saveTrackingState() {
     localStorage.setItem(getStorageKey(), JSON.stringify(trackingState));
     renderPCBox();
+    renderMobilePCBox();
+}
+
+// Save current area index
+function saveAreaIndex() {
+    localStorage.setItem(getAreaIndexKey(), currentAreaIndex.toString());
 }
 
 // Get Pokemon tracking state
@@ -144,6 +160,7 @@ function closeEvoModal() {
     document.getElementById('evo-modal').classList.add('hidden');
     renderCarousel();
     restoreTabState();
+    renderMobilePCBox();
 }
 
 // Restore tab state after re-render
@@ -516,6 +533,7 @@ function selectArea(idx, direction = null) {
     
     setTimeout(() => {
         currentAreaIndex = idx;
+        saveAreaIndex();
         renderCarouselNoTransition();
         renderAreaList();
         isTransitioning = false;
@@ -611,7 +629,10 @@ function renderEncounterSection(title, encounters, isWalking = false, areaIdx, i
     if (isWalking && !encounters.morning?.length && !encounters.day?.length && !encounters.night?.length) return '';
 
     const uniqueId = `area-${areaIdx}`;
-    const gridClass = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 p-4 min-h-[300px] content-start';
+    const isMobile = window.innerWidth < 768;
+    const gridClass = isMobile 
+        ? 'flex flex-wrap gap-2 p-2 justify-center'
+        : 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 p-4 min-h-[300px] content-start';
     
     let content = '';
     if (isWalking) {
@@ -1123,12 +1144,110 @@ function showMobileTab(tab) {
     
     if (areasView) areasView.classList.add('hidden');
     if (pcView) pcView.classList.add('hidden');
+    if (mainContent) mainContent.classList.add('hidden');
     
     if (tab === 'areas' && areasView) {
         areasView.classList.remove('hidden');
+        renderMobileAreaList();
     } else if (tab === 'pc' && pcView) {
         pcView.classList.remove('hidden');
+        renderMobilePCBox();
+    } else if (tab === 'tracker' && mainContent) {
+        mainContent.classList.remove('hidden');
     }
+}
+
+// Render mobile area list
+let mobileAreaFilterQuery = '';
+
+function renderMobileAreaList() {
+    const container = document.getElementById('mobile-area-list');
+    if (!container || !data) return;
+    
+    const filterLower = mobileAreaFilterQuery.toLowerCase();
+    
+    container.innerHTML = data.areas.map((area, idx) => {
+        const matchesFilter = !filterLower || area.area_name.toLowerCase().includes(filterLower);
+        if (!matchesFilter) return '';
+        
+        return `
+            <button 
+                onclick="selectArea(${idx}); showMobileTab('tracker');"
+                class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 rounded-lg mb-2 shadow-sm transition-colors ${
+                    idx === currentAreaIndex 
+                        ? 'border-2 border-pokemon-blue' 
+                        : 'border border-gray-200 dark:border-gray-700'
+                }"
+            >
+                <div class="font-medium dark:text-white">${area.area_name}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">Area ${idx + 1}</div>
+            </button>
+        `;
+    }).join('');
+}
+
+function filterMobileAreas(query) {
+    mobileAreaFilterQuery = query;
+    renderMobileAreaList();
+}
+
+// Render mobile PC box
+function renderMobilePCBox() {
+    const container = document.getElementById('mobile-pc-sprites');
+    const statsEl = document.getElementById('mobile-pc-stats');
+    
+    if (!container || !statsEl) return;
+    
+    if (!encounterOrder.length) {
+        encounterOrder = buildEncounterOrder();
+    }
+    
+    const baseToLine = new Map();
+    const processedBases = new Set();
+    
+    for (const poke of encounterOrder) {
+        const line = getEvolutionLine(poke.name);
+        const baseDex = line[0]?.dex;
+        
+        if (baseDex && !processedBases.has(baseDex)) {
+            processedBases.add(baseDex);
+            baseToLine.set(baseDex, line);
+        }
+    }
+    
+    let totalCount = 0;
+    let html = '';
+    
+    for (const poke of encounterOrder) {
+        const line = getEvolutionLine(poke.name);
+        const baseDex = line[0]?.dex;
+        
+        if (!baseToLine.has(baseDex)) continue;
+        const storedLine = baseToLine.get(baseDex);
+        baseToLine.delete(baseDex);
+        
+        for (const member of storedLine) {
+            const state = getPokemonState(member.dex);
+            const count = state.count || 0;
+            
+            if (count > 0) {
+                totalCount += count;
+                for (let i = 0; i < count; i++) {
+                    html += `
+                        <div class="relative cursor-pointer" onclick="openEvoModal('${member.name}', ${member.dex})" title="${member.name}">
+                            <img src="sprites/${member.dex}.png" 
+                                 alt="${member.name}" 
+                                 class="w-14 h-14 pixelated"
+                                 onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${member.dex}.png'">
+                        </div>
+                    `;
+                }
+            }
+        }
+    }
+    
+    container.innerHTML = html || '<div class="col-span-5 text-center text-gray-500 dark:text-gray-400 py-8">No Pokemon caught yet</div>';
+    statsEl.textContent = `${totalCount} Pokemon caught`;
 }
 
 // Initialize
@@ -1176,6 +1295,14 @@ async function init() {
         if (areaSearchInput) {
             areaSearchInput.addEventListener('input', (e) => {
                 filterAreas(e.target.value);
+            });
+        }
+        
+        // Mobile area filter input handler
+        const mobileAreaSearchInput = document.getElementById('mobile-area-search-input');
+        if (mobileAreaSearchInput) {
+            mobileAreaSearchInput.addEventListener('input', (e) => {
+                filterMobileAreas(e.target.value);
             });
         }
 
