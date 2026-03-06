@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renegade Platinum Living Dex Tracker</title>
+    <title>Pokemon Living Dex Tracker</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#E53935">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,9 +16,6 @@
             theme: {
                 extend: {
                     colors: {
-                        morning: '#FFF3E0',
-                        day: '#E3F2FD',
-                        night: '#1A237E',
                         pokemon: {
                             red: '#E53935',
                             blue: '#1E88E5',
@@ -25,230 +27,80 @@
         }
     </script>
     <style>
-        .caught { filter: grayscale(0) !important; opacity: 1 !important; }
-        .not-caught { filter: grayscale(100%); opacity: 0.5; }
-        .evolved { border-color: #22c55e !important; background-color: rgba(34, 197, 94, 0.1); }
-        .zero-catch { opacity: 0.4; }
-        .sprite-hover:hover { transform: scale(1.1); }
-        .pixelated { image-rendering: pixelated; }
-        .area-morning { background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); color: #1f2937; }
-        .area-day { background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); color: #1f2937; }
-        .area-night { background: linear-gradient(135deg, #1A237E 0%, #311B92 100%); color: white; }
-        .area-neutral { background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%); color: #1f2937; }
-        
-        /* Dark mode area styles - keep cards visible */
-        .dark .area-morning { background: linear-gradient(135deg, #451a03 0%, #78350f 100%); color: white; }
-        .dark .area-day { background: linear-gradient(135deg, #0c1929 0%, #1e3a5f 100%); color: white; }
-        .dark .area-neutral { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); color: white; }
-        
-        /* Pokemon cards should be light/white to contrast with area backgrounds */
-        .pokemon-card {
-            background: white;
-            color: #1f2937;
+        .game-card {
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
         }
-        .dark .pokemon-card {
-            background: rgba(255, 255, 255, 0.95);
-            color: #1f2937;
+        .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-        
-        .scrollbar-thin::-webkit-scrollbar { width: 6px; }
-        .scrollbar-thin::-webkit-scrollbar-thumb { background: #888; border-radius: 3px; }
-        .dark .scrollbar-thin::-webkit-scrollbar-thumb { background: #555; }
-        
-        /* Tab content transitions */
-        [class*="method-content-"] {
-            transition: opacity 0.15s ease-out, transform 0.15s ease-out;
-        }
-        [class*="walking-swipe-track-"] {
+        .game-card img {
             transition: transform 0.3s ease-out;
         }
-        
-        /* Tooltip styles */
-        .badge-tooltip {
-            position: relative;
-        }
-        .badge-tooltip {
-            position: relative;
-        }
-        .badge-tooltip .tooltip-text {
-            display: none;
-            position: fixed;
-            background: #1f2937;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            white-space: nowrap;
-            z-index: 99999;
-            pointer-events: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        
-        /* Carousel styles */
-        .carousel-container {
-            position: relative;
-            height: calc(100vh - 80px);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .area-slide {
-            position: absolute;
-            width: 100%;
-            max-width: 56rem;
-            padding: 1rem;
-            transform-origin: center center;
-            will-change: transform, opacity;
-        }
-        .area-slide.no-transition {
-            transition: none !important;
-        }
-        .area-slide.with-transition {
-            transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-        }
-        .area-slide.current {
-            transform: translateY(0) scale(1);
-            opacity: 1;
-            z-index: 2;
-        }
-        .area-slide.prev {
-            transform: translateY(-100%) scale(0.85);
-            opacity: 0;
-            z-index: 1;
-        }
-        .area-slide.next {
-            transform: translateY(100%) scale(0.85);
-            opacity: 0;
-            z-index: 1;
-        }
-        
-        .area-card-inner {
-            overflow-y: visible;
+        .game-card:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 min-h-screen overflow-hidden">
-    <div class="flex h-screen">
-        <!-- Sidebar -->
-        <aside id="sidebar" class="w-64 bg-white dark:bg-gray-800 shadow-lg overflow-hidden flex-shrink-0 flex flex-col">
-            <div class="p-4 bg-pokemon-red text-white flex justify-between items-center flex-shrink-0">
-                <div>
-                    <h1 class="text-lg font-bold">Renegade Platinum</h1>
-                    <p class="text-sm opacity-90">Living Dex Tracker</p>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-pokemon-red text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                            <line x1="2" y1="12" x2="9" y2="12" stroke="currentColor" stroke-width="2"/>
+                            <line x1="15" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Pokemon Living Dex Tracker</h1>
+                        <p class="text-sm opacity-90">Track your progress across all games</p>
+                    </div>
                 </div>
                 <button onclick="toggleDarkMode()" class="p-2 rounded-lg hover:bg-white/20 transition-colors" title="Toggle dark mode">
-                    <svg id="dark-mode-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg id="dark-mode-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
                     </svg>
                 </button>
             </div>
-            <div class="p-2 border-b border-gray-200 dark:border-gray-700 flex-shrink-0">
-                <input 
-                    type="text" 
-                    id="area-search-input" 
-                    placeholder="Filter locations..." 
-                    class="w-full px-3 py-1.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pokemon-blue focus:border-transparent outline-none bg-white dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
-                >
-            </div>
-            <nav id="area-list" class="p-2 overflow-y-auto scrollbar-thin flex-1">
-                <!-- Areas populated by JS -->
-            </nav>
-        </aside>
-
-        <!-- Main Content Area (3/4) -->
-        <main class="w-3/4 flex flex-col overflow-hidden">
-            <!-- Search Bar -->
-            <div class="bg-white dark:bg-gray-800 shadow-md z-10 p-4 flex-shrink-0">
-                <div class="max-w-3xl">
-                    <input 
-                        type="text" 
-                        id="search-input" 
-                        placeholder="Search for a Pokémon..." 
-                        class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pokemon-blue focus:border-transparent outline-none bg-white dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
-                    >
-                </div>
-            </div>
-
-            <!-- Search Results (hidden by default) -->
-            <div id="search-results" class="hidden flex-1 overflow-y-auto">
-                <div class="max-w-3xl p-4">
-                    <h2 class="text-xl font-bold mb-4 dark:text-white">Search Results</h2>
-                    <div id="search-results-content"></div>
-                </div>
-            </div>
-
-            <!-- Area Carousel -->
-            <div id="area-content" class="carousel-container">
-                <div id="area-slide-prev" class="area-slide prev no-transition"></div>
-                <div id="area-slide-current" class="area-slide current no-transition"></div>
-                <div id="area-slide-next" class="area-slide next no-transition"></div>
-            </div>
-            
-            <!-- Navigation hint -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 dark:text-gray-500 text-sm pointer-events-none z-10" id="nav-hint">
-                Scroll or use arrow keys to navigate areas
-            </div>
-        </main>
-
-        <!-- PC Box View (1/4) -->
-        <aside class="w-1/4 bg-gray-100 dark:bg-gray-900 border-l border-gray-300 dark:border-gray-700 flex flex-col overflow-hidden">
-            <div class="bg-pokemon-red text-white p-3 flex-shrink-0">
-                <h2 class="font-bold text-lg flex items-center gap-2">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <circle cx="12" cy="12" r="3" fill="currentColor"/>
-                        <line x1="2" y1="12" x2="9" y2="12" stroke="currentColor" stroke-width="2"/>
-                        <line x1="15" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                    PC Box
-                </h2>
-                <div id="pc-stats" class="text-sm opacity-80 mt-1">0 Pokémon caught</div>
-            </div>
-            <div id="pc-box-content" class="flex-1 overflow-y-auto p-2 scrollbar-thin">
-                <div id="pc-sprites" class="grid grid-cols-4 gap-1">
-                    <!-- Pokemon sprites populated by JS -->
-                </div>
-            </div>
-        </aside>
-    </div>
-
-    <!-- Evolution Popup Modal - positioned over main content area only -->
-    <div id="evo-modal" class="fixed inset-0 hidden z-50" style="left: 256px; right: 25%;">
-        <div class="absolute inset-0 bg-black bg-opacity-50" onclick="closeEvoModal()"></div>
-        <div class="absolute inset-0 flex items-center justify-center p-4 pointer-events-none">
-            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 max-w-3xl w-full max-h-[90vh] overflow-y-auto pointer-events-auto">
-                <div class="flex justify-between items-center mb-4">
-                    <h3 id="evo-modal-title" class="text-xl font-bold dark:text-white"></h3>
-                    <button onclick="closeEvoModal()" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <div id="evo-modal-content" class="flex flex-wrap gap-4 justify-center items-stretch">
-                    <!-- Evolution sprites populated by JS -->
-                </div>
-            </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1">
+        <h2 class="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-6">Select a Game</h2>
+        
+        <div id="games-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Games loaded dynamically -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500 dark:text-gray-400 text-sm">
+        <p>Track your Living Dex progress for Pokemon ROM hacks and fan games</p>
+        <p class="mt-2">Add to home screen for the best experience</p>
+    </footer>
 
     <script>
-        // Global state
-        let data = null;
-        let evolutions = null;
-        let currentAreaIndex = 0;
-        let trackingState = {};
-        let isTransitioning = false;
-        let scrollAccumulator = 0;
-        const SCROLL_THRESHOLD = 150;
-        let isDarkMode = localStorage.getItem('darkMode') !== 'false';
-        
-        // Track active tabs per area to restore after re-render
-        let activeMethodTabs = {};  // { areaIdx: 'walking' | 'surf' | etc }
-        let activeWalkingTabs = {}; // { areaIdx: 'morning' | 'day' | 'night' | 'morning-day' | etc }
+        // Available games
+        const games = [
+            {
+                id: 'renegade-platinum',
+                name: 'Renegade Platinum',
+                description: 'A difficulty/enhancement hack of Pokemon Platinum with all 493 Pokemon available.',
+                region: 'Sinnoh',
+                generation: 4,
+                coverImage: 'images/pokemon-platinum.png'
+            }
+        ];
 
-        // Initialize dark mode
+        // Dark mode
+        let isDarkMode = localStorage.getItem('darkMode') !== 'false';
+
         function initDarkMode() {
             if (isDarkMode) {
                 document.documentElement.classList.add('dark');
@@ -258,7 +110,6 @@
             updateDarkModeIcon();
         }
 
-        // Toggle dark mode
         function toggleDarkMode() {
             isDarkMode = !isDarkMode;
             localStorage.setItem('darkMode', isDarkMode);
@@ -266,1261 +117,70 @@
             updateDarkModeIcon();
         }
 
-        // Update dark mode icon
         function updateDarkModeIcon() {
             const icon = document.getElementById('dark-mode-icon');
             if (isDarkMode) {
-                // Sun icon for dark mode (click to go light)
                 icon.innerHTML = '<path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/>';
             } else {
-                // Moon icon for light mode (click to go dark)
                 icon.innerHTML = '<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>';
             }
         }
 
-        // Load tracking state from localStorage
-        function loadTrackingState() {
-            const saved = localStorage.getItem('pokemonLiveDexTracking');
-            if (saved) {
-                trackingState = JSON.parse(saved);
-            }
-        }
-
-        // Save tracking state to localStorage
-        function saveTrackingState() {
-            localStorage.setItem('pokemonLiveDexTracking', JSON.stringify(trackingState));
-            renderPCBox();
-        }
-
-        // Get Pokemon tracking state
-        function getPokemonState(pokedexNum) {
-            return trackingState[pokedexNum] || { count: 0 };
-        }
-
-        // Set Pokemon tracking state
-        function setPokemonState(pokedexNum, state) {
-            trackingState[pokedexNum] = { ...getPokemonState(pokedexNum), ...state };
-            saveTrackingState();
-        }
-
-        // Increment count (catch one more)
-        function incrementCount(pokedexNum, e) {
-            if (e) e.stopPropagation();
-            const state = getPokemonState(pokedexNum);
-            setPokemonState(pokedexNum, { count: (state.count || 0) + 1 });
-            renderEvoModal(currentEvoModalPokemon);
-        }
-
-        // Decrement count (release one)
-        function decrementCount(pokedexNum, e) {
-            if (e) e.stopPropagation();
-            const state = getPokemonState(pokedexNum);
-            const newCount = Math.max(0, (state.count || 0) - 1);
-            setPokemonState(pokedexNum, { count: newCount });
-            renderEvoModal(currentEvoModalPokemon);
-        }
-
-        // Check if we can evolve: need to keep 1 of each in the line
-        function canEvolvePokemon(fromDex, line, evoConnections) {
-            // Get all pokemon in the line that eventually evolve INTO fromDex (ancestors)
-            const getAncestorSurplus = (dex) => {
-                let surplus = 0;
-                const ancestorConnections = evoConnections.filter(e => e.toDex === dex);
-                for (const conn of ancestorConnections) {
-                    const ancestorState = getPokemonState(conn.fromDex);
-                    const ancestorCount = ancestorState.count || 0;
-                    // Ancestor surplus = count - 1 (keep 1) + any surplus from their ancestors
-                    surplus += Math.max(0, ancestorCount - 1) + getAncestorSurplus(conn.fromDex);
-                }
-                return surplus;
-            };
+        // Render game cards
+        function renderGames() {
+            const container = document.getElementById('games-grid');
             
-            const fromState = getPokemonState(fromDex);
-            const fromCount = fromState.count || 0;
-            const ancestorSurplus = getAncestorSurplus(fromDex);
-            
-            // Can evolve if current count + ancestor surplus >= 2 (keep 1, evolve 1)
-            return (fromCount + ancestorSurplus) >= 2;
-        }
-        
-        // Evolve: subtract 1 from source, add 1 to target
-        function evolvePokemon(fromDex, toDex, e) {
-            if (e) e.stopPropagation();
-            const fromState = getPokemonState(fromDex);
-            const toState = getPokemonState(toDex);
-            
-            setPokemonState(fromDex, { count: Math.max(0, (fromState.count || 0) - 1) });
-            setPokemonState(toDex, { count: (toState.count || 0) + 1 });
-            renderEvoModal(currentEvoModalPokemon);
-        }
-
-        let currentEvoModalPokemon = null;
-
-        // Open evolution modal
-        function openEvoModal(pokemonName, pokedexNum) {
-            currentEvoModalPokemon = { name: pokemonName, dex: pokedexNum };
-            renderEvoModal(currentEvoModalPokemon);
-            document.getElementById('evo-modal').classList.remove('hidden');
-        }
-
-        // Close evolution modal
-        function closeEvoModal() {
-            document.getElementById('evo-modal').classList.add('hidden');
-            renderCarousel();
-            restoreTabState();
-        }
-        
-        // Restore tab state after re-render
-        function restoreTabState() {
-            const uniqueId = `area-${currentAreaIndex}`;
-            
-            // Restore method tab (Walking, Surf, etc.) without animation
-            const savedMethod = activeMethodTabs[currentAreaIndex];
-            if (savedMethod) {
-                const methodBtn = document.querySelector(`.method-tab-${uniqueId}[onclick="showMethodTab('${savedMethod}', '${uniqueId}')"]`);
-                if (methodBtn) {
-                    showMethodTab(savedMethod, uniqueId, false);
-                }
-            }
-            
-            // Restore walking sub-tab (Morning, Day, Night, etc.) without animation
-            const savedWalking = activeWalkingTabs[currentAreaIndex];
-            if (savedWalking) {
-                const walkingBtn = document.querySelector(`.walking-tab-${uniqueId}[data-tab-index]`);
-                const container = document.querySelector(`.walking-swipe-container-${uniqueId}`);
-                if (container) {
-                    const tabs = JSON.parse(container.dataset.tabs || '[]');
-                    const idx = tabs.indexOf(savedWalking);
-                    const actualBtn = document.querySelector(`.walking-tab-${uniqueId}[data-tab-index="${idx}"]`);
-                    if (actualBtn) {
-                        showWalkingTabById(actualBtn, savedWalking, uniqueId, false);
-                    }
-                }
-            }
-        }
-
-        // Find evolution line for a Pokemon
-        function getEvolutionLine(pokemonName) {
-            if (!evolutions) return [{ name: pokemonName, dex: null }];
-            
-            let baseName = pokemonName;
-            let found = true;
-            while (found) {
-                found = false;
-                for (const p of evolutions.pokemon) {
-                    for (const evo of p.evolves_to || []) {
-                        if (evo.pokemon === baseName) {
-                            baseName = p.pokemon;
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (found) break;
-                }
-            }
-
-            const line = [];
-            const collectLine = (name) => {
-                const pokemon = evolutions.pokemon.find(p => p.pokemon === name);
-                if (pokemon) {
-                    line.push({ name: pokemon.pokemon, dex: pokemon.pokedex_number });
-                    for (const evo of pokemon.evolves_to || []) {
-                        collectLine(evo.pokemon);
-                    }
-                }
-            };
-            collectLine(baseName);
-            return line;
-        }
-
-        // Get evolution info for tooltip
-        function getEvoInfo(pokemonName, targetEvo) {
-            if (!evolutions) return null;
-            const pokemon = evolutions.pokemon.find(p => p.pokemon === pokemonName);
-            if (!pokemon) return null;
-            
-            for (const evo of pokemon.evolves_to || []) {
-                if (evo.pokemon === targetEvo) {
-                    return evo;
-                }
-            }
-            return null;
-        }
-
-        // Render evolution modal
-        function renderEvoModal(pokemon) {
-            const title = document.getElementById('evo-modal-title');
-            const content = document.getElementById('evo-modal-content');
-            
-            title.textContent = `${pokemon.name} Evolution Line`;
-            
-            const line = getEvolutionLine(pokemon.name);
-            
-            // Build evolution connections (which pokemon evolves into which)
-            const evoConnections = [];
-            for (let i = 0; i < line.length; i++) {
-                const pokemon = evolutions.pokemon.find(p => p.pokemon === line[i].name);
-                if (pokemon && pokemon.evolves_to) {
-                    for (const evo of pokemon.evolves_to) {
-                        const targetIdx = line.findIndex(l => l.name === evo.pokemon);
-                        if (targetIdx !== -1) {
-                            evoConnections.push({
-                                fromIdx: i,
-                                toIdx: targetIdx,
-                                fromDex: line[i].dex,
-                                toDex: line[targetIdx].dex,
-                                toName: evo.pokemon,
-                                method: evo.method,
-                                level: evo.level,
-                                item: evo.item
-                            });
-                        }
-                    }
-                }
-            }
-            
-            content.innerHTML = line.map((p, idx) => {
-                const state = getPokemonState(p.dex);
-                const count = state.count || 0;
-                const hasAny = count > 0;
-                const ringClass = hasAny ? 'ring-4 ring-pokemon-blue' : '';
-                
-                // Find evolutions FROM this pokemon
-                const evosFrom = evoConnections.filter(e => e.fromIdx === idx);
-                // Can evolve if we have enough considering ancestor surplus
-                const canEvolve = count > 0 && canEvolvePokemon(p.dex, line, evoConnections);
-                
-                // Get evo info for display above this pokemon (how it evolves FROM previous)
-                let evoInfo = '';
-                const evoTo = evoConnections.find(e => e.toIdx === idx);
-                if (evoTo) {
-                    if (evoTo.method === 'level' && evoTo.level) {
-                        evoInfo = `Lv. ${evoTo.level}`;
-                    } else if (evoTo.method === 'item' && evoTo.item) {
-                        evoInfo = evoTo.item;
-                    } else if (evoTo.method === 'happiness') {
-                        evoInfo = 'Happiness';
-                    } else {
-                        evoInfo = evoTo.method || '';
-                    }
-                }
-                
-                // Build evolve buttons
-                let evolveButtons = '';
-                if (evosFrom.length > 0) {
-                    evolveButtons = evosFrom.map(evo => {
-                        const disabled = !canEvolve;
-                        const btnClass = disabled 
-                            ? 'bg-gray-300 dark:bg-gray-600 text-gray-400 cursor-not-allowed' 
-                            : 'bg-green-500 hover:bg-green-600 text-white cursor-pointer';
-                        return `
-                            <button 
-                                onclick="${disabled ? '' : `evolvePokemon(${evo.fromDex}, ${evo.toDex}, event)`}"
-                                class="w-full py-1.5 px-2 rounded text-xs font-medium transition-colors ${btnClass}"
-                                ${disabled ? 'disabled' : ''}
-                                title="${disabled ? 'Need 2+ to evolve (keep 1 for dex)' : `Evolve to ${evo.toName}`}"
-                            >
-                                Evolve → ${evo.toName}
-                            </button>
-                        `;
-                    }).join('');
-                }
-                
-                return `
-                    <div class="flex flex-col items-center">
-                        <div class="h-6 flex items-end justify-center mb-1">
-                            ${evoInfo ? `<span class="text-xs text-gray-500 dark:text-gray-400">${evoInfo}</span>` : ''}
-                        </div>
-                        <div class="relative rounded-xl p-4 ${ringClass} bg-gray-50 dark:bg-gray-700 transition-all w-[140px] flex flex-col">
-                            <img 
-                                src="sprites/${p.dex}.png" 
-                                alt="${p.name}"
-                                class="w-20 h-20 pixelated mx-auto"
-                                onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.dex}.png'"
-                            >
-                            <div class="text-center text-sm font-semibold dark:text-white mt-1 truncate">${p.name}</div>
-                            
-                            <!-- Count display with +/- -->
-                            <div class="flex items-center justify-center gap-2 mt-2">
-                                <button 
-                                    onclick="decrementCount(${p.dex}, event)"
-                                    class="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 flex items-center justify-center text-gray-700 dark:text-gray-200 font-bold text-sm transition-colors"
-                                >-</button>
-                                <span class="w-8 text-center font-bold text-xl ${hasAny ? 'text-pokemon-blue' : 'text-gray-400'}">${count}</span>
-                                <button 
-                                    onclick="incrementCount(${p.dex}, event)"
-                                    class="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 flex items-center justify-center text-gray-700 dark:text-gray-200 font-bold text-sm transition-colors"
-                                >+</button>
-                            </div>
-                            <div class="text-xs text-center text-gray-500 dark:text-gray-400 mb-2">in box</div>
-                            
-                            <!-- Evolve buttons - fixed height area -->
-                            <div class="min-h-[32px] flex flex-col justify-end">
-                                ${evolveButtons ? `<div class="space-y-1">${evolveButtons}</div>` : ''}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('<div class="flex items-center text-2xl text-gray-300 dark:text-gray-600 self-center">→</div>');
-        }
-
-        // Render area list in sidebar
-        let areaFilterQuery = '';
-        
-        // Build ordered list of Pokemon by first encounter
-        function buildEncounterOrder() {
-            const order = [];
-            const seen = new Set();
-            
-            for (const area of data.areas) {
-                // Walking encounters (morning, day, night)
-                for (const time of ['morning', 'day', 'night']) {
-                    for (const enc of area.encounters.walking?.[time] || []) {
-                        if (!seen.has(enc.pokedex_number)) {
-                            seen.add(enc.pokedex_number);
-                            order.push({
-                                name: enc.pokemon,
-                                dex: enc.pokedex_number,
-                                area: area.area_name
-                            });
-                        }
-                    }
-                }
-                // Other methods
-                for (const method of ['surf', 'old_rod', 'good_rod', 'super_rod', 'honey_tree', 'poke_radar']) {
-                    for (const enc of area.encounters[method] || []) {
-                        if (!seen.has(enc.pokedex_number)) {
-                            seen.add(enc.pokedex_number);
-                            order.push({
-                                name: enc.pokemon,
-                                dex: enc.pokedex_number,
-                                area: area.area_name
-                            });
-                        }
-                    }
-                }
-            }
-            return order;
-        }
-        
-        let encounterOrder = [];
-        
-        // Render PC Box with caught Pokemon
-        function renderPCBox() {
-            const container = document.getElementById('pc-sprites');
-            const statsEl = document.getElementById('pc-stats');
-            
-            if (!encounterOrder.length) {
-                encounterOrder = buildEncounterOrder();
-            }
-            
-            // Build a map of base Pokemon to their full evolution lines (in evo order)
-            const baseToLine = new Map();
-            const processedBases = new Set();
-            
-            for (const poke of encounterOrder) {
-                const line = getEvolutionLine(poke.name);
-                const baseDex = line[0]?.dex;
-                
-                if (baseDex && !processedBases.has(baseDex)) {
-                    processedBases.add(baseDex);
-                    baseToLine.set(baseDex, line);
-                }
-            }
-            
-            let totalCount = 0;
-            let html = '';
-            
-            // Go through base Pokemon in encounter order, render entire evo line together
-            for (const poke of encounterOrder) {
-                const line = getEvolutionLine(poke.name);
-                const baseDex = line[0]?.dex;
-                
-                // Only process when we hit the base form (or first encountered member of this line)
-                if (!baseToLine.has(baseDex)) continue;
-                const storedLine = baseToLine.get(baseDex);
-                baseToLine.delete(baseDex); // Remove so we don't process again
-                
-                // Render all Pokemon in this evolution line that have been caught
-                for (const member of storedLine) {
-                    const state = getPokemonState(member.dex);
-                    const count = state.count || 0;
-                    
-                    if (count > 0) {
-                        totalCount += count;
-                        for (let i = 0; i < count; i++) {
-                            html += `
-                                <div class="relative cursor-pointer hover:z-20" onclick="openEvoModal('${member.name}', ${member.dex})" title="${member.name}">
-                                    <img src="sprites/${member.dex}.png" 
-                                         alt="${member.name}" 
-                                         class="w-16 h-16 pixelated transition-transform duration-200 hover:scale-[2] hover:drop-shadow-lg"
-                                         onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${member.dex}.png'">
-                                </div>
-                            `;
-                        }
-                    }
-                }
-            }
-            
-            container.innerHTML = html || '<div class="col-span-5 text-center text-gray-500 dark:text-gray-400 py-8">No Pokémon caught yet</div>';
-            statsEl.textContent = `${totalCount} Pokémon caught`;
-        }
-
-        function renderAreaList() {
-            const container = document.getElementById('area-list');
-            const filterLower = areaFilterQuery.toLowerCase();
-            
-            container.innerHTML = data.areas.map((area, idx) => {
-                const matchesFilter = !filterLower || area.area_name.toLowerCase().includes(filterLower);
-                if (!matchesFilter) return '';
-                
-                return `
-                    <button 
-                        onclick="selectArea(${idx})"
-                        id="area-btn-${idx}"
-                        class="w-full text-left px-3 py-2 text-sm rounded-lg mb-1 transition-colors ${
-                            idx === currentAreaIndex 
-                                ? 'bg-pokemon-blue text-white' 
-                                : 'hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-200'
-                        }"
-                    >
-                        ${area.area_name}
-                    </button>
-                `;
-            }).join('');
-            
-            // Scroll active item into view (only if not filtering)
-            if (!filterLower) {
-                const activeBtn = document.getElementById(`area-btn-${currentAreaIndex}`);
-                if (activeBtn) {
-                    activeBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }
-        }
-        
-        function filterAreas(query) {
-            areaFilterQuery = query;
-            renderAreaList();
-        }
-
-        // Select an area with animation
-        function selectArea(idx, direction = null) {
-            if (isTransitioning || idx === currentAreaIndex) return;
-            if (idx < 0 || idx >= data.areas.length) return;
-            
-            isTransitioning = true;
-            
-            // Determine direction if not provided
-            if (direction === null) {
-                direction = idx > currentAreaIndex ? 'down' : 'up';
-            }
-            
-            const prevSlide = document.getElementById('area-slide-prev');
-            const currentSlide = document.getElementById('area-slide-current');
-            const nextSlide = document.getElementById('area-slide-next');
-            
-            // Enable transitions
-            [prevSlide, currentSlide, nextSlide].forEach(s => {
-                s.classList.remove('no-transition');
-                s.classList.add('with-transition');
-            });
-            
-            if (direction === 'down') {
-                // Prepare next slide content and position (without transition)
-                nextSlide.classList.remove('with-transition');
-                nextSlide.classList.add('no-transition');
-                nextSlide.innerHTML = renderAreaCard(data.areas[idx], idx);
-                nextSlide.className = 'area-slide next no-transition';
-                
-                // Force reflow
-                nextSlide.offsetHeight;
-                
-                // Now enable transition and animate
-                nextSlide.classList.remove('no-transition');
-                nextSlide.classList.add('with-transition');
-                
-                // Animate current out and next in
-                currentSlide.className = 'area-slide prev with-transition';
-                nextSlide.className = 'area-slide current with-transition';
-            } else {
-                // Prepare prev slide content and position (without transition)
-                prevSlide.classList.remove('with-transition');
-                prevSlide.classList.add('no-transition');
-                prevSlide.innerHTML = renderAreaCard(data.areas[idx], idx);
-                prevSlide.className = 'area-slide prev no-transition';
-                
-                // Force reflow
-                prevSlide.offsetHeight;
-                
-                // Now enable transition and animate
-                prevSlide.classList.remove('no-transition');
-                prevSlide.classList.add('with-transition');
-                
-                // Animate current out and prev in
-                currentSlide.className = 'area-slide next with-transition';
-                prevSlide.className = 'area-slide current with-transition';
-            }
-            
-            setTimeout(() => {
-                currentAreaIndex = idx;
-                // Reset carousel without transitions
-                renderCarouselNoTransition();
-                renderAreaList();
-                isTransitioning = false;
-                scrollAccumulator = 0;
-            }, 420);
-            
-            document.getElementById('search-results').classList.add('hidden');
-            document.getElementById('area-content').classList.remove('hidden');
-        }
-
-        // Get optimal time class
-        function getTimeClass(optimalTime) {
-            switch (optimalTime) {
-                case 'morning': return 'area-morning';
-                case 'day': return 'area-day';
-                case 'night': return 'area-night';
-                default: return 'area-neutral';
-            }
-        }
-
-        // Render a Pokemon card as a compact grid box
-        function renderPokemonCard(pokemon) {
-            const state = getPokemonState(pokemon.pokedex_number);
-            const zeroCatch = pokemon.catch_count === 0;
-            const caughtClass = (state.count || 0) > 0 ? 'caught' : 'not-caught';
-            
-            // Warning indicators
-            const hasWarning = pokemon.above_evo_warning;
-            const hasBetter = pokemon.better_opportunity;
-            const warningTitle = hasWarning ? pokemon.above_evo_warning : '';
-            const betterTitle = hasBetter ? `Better at ${pokemon.better_opportunity.area} (${pokemon.better_opportunity.encounter_rate}%)` : '';
-            
-            // Build tooltip content
-            let tooltipLines = [
-                `${pokemon.pokemon} #${pokemon.pokedex_number}`,
-                `${pokemon.encounter_rate}% encounter rate`,
-                `Level ${pokemon.level_range}`,
-                `Catch ${pokemon.catch_count} for living dex`
-            ];
-            if (hasWarning) {
-                tooltipLines.push(`Warning: Over evolution level`);
-            }
-            if (hasBetter) {
-                tooltipLines.push(`Better: ${pokemon.better_opportunity.area} (${pokemon.better_opportunity.encounter_rate}%)`);
-            }
-
-            return `
-                <div 
-                    class="pokemon-card badge-tooltip relative flex flex-col items-center p-4 rounded-xl shadow-sm ${zeroCatch ? 'zero-catch' : ''} hover:shadow-lg hover:scale-105 transition-all cursor-pointer"
-                    onclick="openEvoModal('${pokemon.pokemon}', ${pokemon.pokedex_number})"
-                >
-                    <span class="tooltip-text" style="white-space: normal; width: 200px; text-align: left; line-height: 1.4;">${tooltipLines.join('<br>')}</span>
-                    
-                    <!-- Catch count badge (top right) -->
-                    <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shadow ${pokemon.catch_count > 0 ? 'bg-pokemon-blue text-white' : 'bg-gray-200 text-gray-500'}" style="z-index: 10;">
-                        ${pokemon.catch_count}
-                    </div>
-                    
-                    <!-- Sprite -->
-                    <div class="sprite-hover transition-transform ${caughtClass} mt-2">
+            container.innerHTML = games.map(game => `
+                <a href="app.html?game=${game.id}" class="game-card block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="aspect-video bg-gradient-to-br from-pokemon-blue to-pokemon-red overflow-hidden">
                         <img 
-                            src="sprites/${pokemon.pokedex_number}.png" 
-                            alt="${pokemon.pokemon}"
-                            class="w-16 h-16 pixelated"
-                            onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.pokedex_number}.png'"
+                            src="${game.coverImage}" 
+                            alt="${game.name}"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'flex items-center justify-center h-full text-white text-4xl font-bold\\'>${game.name.charAt(0)}</div>'"
                         >
                     </div>
-                    
-                    <!-- Name -->
-                    <div class="text-sm font-semibold text-center truncate w-full mt-2 text-gray-800">${pokemon.pokemon}</div>
-                    
-                    <!-- Info badges row -->
-                    <div class="flex items-center justify-center gap-2 mt-2 flex-wrap">
-                        <span class="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs rounded-full font-medium">${pokemon.encounter_rate}%</span>
-                        <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs rounded-full font-medium">Lv. ${pokemon.level_range}</span>
-                        ${hasWarning ? `<span class="px-2 py-0.5 bg-red-100 text-red-700 text-xs rounded-full font-medium" title="${warningTitle}">Over Evo</span>` : ''}
-                        ${hasBetter ? `<span class="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full font-medium" title="${betterTitle}">Skip</span>` : ''}
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">${game.name}</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">${game.region} Region - Gen ${game.generation}</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2 line-clamp-2">${game.description}</p>
+                        <div class="mt-4 flex items-center text-pokemon-blue font-medium text-sm">
+                            <span>Start Tracking</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+            
+            // Add "Coming Soon" placeholder
+            container.innerHTML += `
+                <div class="game-card block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden opacity-60">
+                    <div class="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">More Games Coming Soon</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Stay tuned for more ROM hacks</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Support for additional games will be added in future updates.</p>
                     </div>
                 </div>
             `;
         }
 
-        // Helper to check if two encounter arrays are identical
-        function encountersEqual(a, b) {
-            if (!a && !b) return true;
-            if (!a || !b) return false;
-            if (a.length !== b.length) return false;
-            return a.every((enc, i) => enc.pokemon === b[i].pokemon && enc.encounter_rate === b[i].encounter_rate);
-        }
-        
-        // Render encounter method section as a grid
-        function renderEncounterSection(title, encounters, isWalking = false, areaIdx, isNightArea = false) {
-            if (!encounters || (Array.isArray(encounters) && encounters.length === 0)) return '';
-            if (isWalking && !encounters.morning?.length && !encounters.day?.length && !encounters.night?.length) return '';
-
-            const uniqueId = `area-${areaIdx}`;
-            const gridClass = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 p-4 min-h-[300px] content-start';
-            
-            let content = '';
-            if (isWalking) {
-                const morning = encounters.morning || [];
-                const day = encounters.day || [];
-                const night = encounters.night || [];
-                
-                // Check which times are identical
-                const morningEqualsDay = encountersEqual(morning, day);
-                const dayEqualsNight = encountersEqual(day, night);
-                const morningEqualsNight = encountersEqual(morning, night);
-                const allSame = morningEqualsDay && dayEqualsNight;
-                
-                // Build consolidated tabs
-                let tabs = [];
-                let contents = [];
-                
-                if (allSame) {
-                    // All three are the same - no tabs needed
-                    tabs = [];
-                    contents = [{
-                        id: 'all',
-                        pokemon: morning,
-                        hidden: false
-                    }];
-                } else if (morningEqualsDay && !dayEqualsNight) {
-                    // Morning = Day, Night different
-                    tabs = [
-                        { id: 'morning-day', label: 'Morning / Day', active: true },
-                        { id: 'night', label: 'Night', active: false }
-                    ];
-                    contents = [
-                        { id: 'morning-day', pokemon: morning, hidden: false },
-                        { id: 'night', pokemon: night, hidden: true }
-                    ];
-                } else if (dayEqualsNight && !morningEqualsDay) {
-                    // Day = Night, Morning different
-                    tabs = [
-                        { id: 'morning', label: 'Morning', active: true },
-                        { id: 'day-night', label: 'Day / Night', active: false }
-                    ];
-                    contents = [
-                        { id: 'morning', pokemon: morning, hidden: false },
-                        { id: 'day-night', pokemon: day, hidden: true }
-                    ];
-                } else if (morningEqualsNight && !morningEqualsDay) {
-                    // Morning = Night, Day different
-                    tabs = [
-                        { id: 'morning-night', label: 'Morning / Night', active: true },
-                        { id: 'day', label: 'Day', active: false }
-                    ];
-                    contents = [
-                        { id: 'morning-night', pokemon: morning, hidden: false },
-                        { id: 'day', pokemon: day, hidden: true }
-                    ];
-                } else {
-                    // All different
-                    tabs = [
-                        { id: 'morning', label: 'Morning', active: true },
-                        { id: 'day', label: 'Day', active: false },
-                        { id: 'night', label: 'Night', active: false }
-                    ];
-                    contents = [
-                        { id: 'morning', pokemon: morning, hidden: false },
-                        { id: 'day', pokemon: day, hidden: true },
-                        { id: 'night', pokemon: night, hidden: true }
-                    ];
-                }
-                
-                const tabIds = tabs.map(t => t.id);
-                const tabsHtml = tabs.length > 0 ? `
-                    <div class="flex border-b mb-3 border-white/20">
-                        ${tabs.map((t, i) => `
-                            <button onclick="showWalkingTabById(this, '${t.id}', '${uniqueId}')" data-tab-index="${i}" class="walking-tab-${uniqueId} px-4 py-2 text-sm font-medium ${t.active ? 'border-b-2 border-pokemon-yellow text-white' : 'text-white/60'}">${t.label}</button>
-                        `).join('')}
-                    </div>
-                ` : '';
-                
-                const contentsHtml = `
-                    <div class="walking-swipe-container-${uniqueId} relative overflow-hidden" data-tabs='${JSON.stringify(tabIds)}' data-current="0">
-                        <div class="walking-swipe-track-${uniqueId} flex transition-transform duration-300 ease-out">
-                            ${contents.map((c, i) => `
-                                <div id="walking-${c.id}-${uniqueId}" data-tab-index="${i}" class="walking-content-${uniqueId} ${gridClass} flex-shrink-0 w-full">
-                                    ${c.pokemon.map(p => renderPokemonCard(p)).join('')}
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-                
-                content = `<div>${tabsHtml}${contentsHtml}</div>`;
-            } else {
-                content = `
-                    <div class="${gridClass}">
-                        ${encounters.map(p => renderPokemonCard(p)).join('')}
-                    </div>
-                `;
-            }
-
-            return `
-                <div>
-                    ${content}
-                </div>
-            `;
-        }
-
-        // Show walking time tab by ID (supports combined tabs like 'morning-day')
-        function showWalkingTabById(btn, tabId, uniqueId, animate = true) {
-            const areaIdx = parseInt(uniqueId.replace('area-', ''));
-            activeWalkingTabs[areaIdx] = tabId;
-            
-            // Update tab buttons
-            document.querySelectorAll(`.walking-tab-${uniqueId}`).forEach(t => {
-                t.classList.remove('border-pokemon-yellow', 'border-b-2', 'text-white');
-                t.classList.add('text-white/60');
-            });
-            if (btn) {
-                btn.classList.add('border-pokemon-yellow', 'border-b-2', 'text-white');
-                btn.classList.remove('text-white/60');
-            }
-            
-            // Slide to the correct tab
-            const container = document.querySelector(`.walking-swipe-container-${uniqueId}`);
-            const track = document.querySelector(`.walking-swipe-track-${uniqueId}`);
-            if (container && track) {
-                const tabs = JSON.parse(container.dataset.tabs || '[]');
-                const tabIndex = tabs.indexOf(tabId);
-                if (tabIndex !== -1) {
-                    container.dataset.current = tabIndex;
-                    track.style.transform = `translateX(-${tabIndex * 100}%)`;
-                }
-            }
-        }
-        
-        // Navigate walking tabs with horizontal scroll
-        function handleWalkingSwipe(uniqueId, direction) {
-            const container = document.querySelector(`.walking-swipe-container-${uniqueId}`);
-            if (!container) return false;
-            
-            const tabs = JSON.parse(container.dataset.tabs || '[]');
-            let current = parseInt(container.dataset.current || '0');
-            
-            if (direction === 'left' && current < tabs.length - 1) {
-                current++;
-            } else if (direction === 'right' && current > 0) {
-                current--;
-            } else {
-                return false; // Can't go further
-            }
-            
-            const tabId = tabs[current];
-            const btn = document.querySelector(`.walking-tab-${uniqueId}[data-tab-index="${current}"]`);
-            showWalkingTabById(btn, tabId, uniqueId);
-            return true;
-        }
-
-        // Render area card HTML
-        function renderAreaCard(area, areaIdx) {
-            if (!area) return '';
-            
-            const idx = areaIdx !== undefined ? areaIdx : data.areas.indexOf(area);
-            const timeClass = getTimeClass(area.optimal_time);
-            const isNight = area.optimal_time === 'night';
-
-            const hasWalking = area.encounters.walking?.morning?.length || 
-                              area.encounters.walking?.day?.length || 
-                              area.encounters.walking?.night?.length;
-
-            const uniqueId = `area-${idx}`;
-            
-            // Determine which methods have encounters, in order
-            const methods = [
-                { key: 'walking', has: hasWalking, label: 'Walking' },
-                { key: 'surf', has: area.encounters.surf?.length, label: 'Surf' },
-                { key: 'old_rod', has: area.encounters.old_rod?.length, label: 'Old Rod' },
-                { key: 'good_rod', has: area.encounters.good_rod?.length, label: 'Good Rod' },
-                { key: 'super_rod', has: area.encounters.super_rod?.length, label: 'Super Rod' },
-                { key: 'honey_tree', has: area.encounters.honey_tree?.length, label: 'Honey Tree' },
-                { key: 'poke_radar', has: area.encounters.poke_radar?.length, label: 'Poké Radar' }
-            ];
-            
-            const firstMethod = methods.find(m => m.has)?.key || null;
-            
-            const inactiveClass = 'text-white/70 hover:bg-white/20';
-            const activeClass = 'bg-pokemon-blue text-white';
-            
-            const renderTabButton = (method) => {
-                const isFirst = method.key === firstMethod;
-                const btnClass = isFirst ? activeClass : inactiveClass;
-                return `<button onclick="showMethodTab('${method.key}', '${uniqueId}')" class="method-tab-${uniqueId} px-3 py-1 rounded-full text-sm font-medium ${btnClass}">${method.label}</button>`;
-            };
-            
-            const renderTabContent = (method, title, encounters, isWalking = false) => {
-                const isFirst = method === firstMethod;
-                const hiddenClass = isFirst ? '' : 'hidden';
-                return `<div id="tab-${method}-${uniqueId}" class="method-content-${uniqueId} min-h-[350px] ${hiddenClass}">${renderEncounterSection(title, encounters, isWalking, idx)}</div>`;
-            };
-
-            // SVG icons for time of day
-            const sunriseIcon = `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M3 12h4a5 5 0 0 1 10 0h4M5.6 5.6l2.8 2.8M18.4 5.6l-2.8 2.8M12 2v3"/><path d="M12 12a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>`;
-            const sunIcon = `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>`;
-            const moonIcon = `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
-            const clockIcon = `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`;
-            
-            const timeIcon = area.optimal_time === 'morning' ? sunriseIcon : 
-                            area.optimal_time === 'day' ? sunIcon : 
-                            area.optimal_time === 'night' ? moonIcon : clockIcon;
-            
-            // In dark mode, all area backgrounds are dark, so text should be light
-            const isDark = document.documentElement.classList.contains('dark');
-            const needsLightText = isNight || isDark;
-            
-            return `
-                <div class="rounded-xl shadow-lg overflow-hidden ${timeClass}">
-                    <div class="area-card-inner p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <div class="flex-1">
-                                <h2 class="text-2xl font-bold">${area.area_name}</h2>
-                                <p class="text-xs opacity-70 mt-1">
-                                    Area ${idx + 1} of ${data.areas.length}
-                                </p>
-                            </div>
-                            <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/20">
-                                <span class="opacity-90">${timeIcon}</span>
-                                <div class="text-sm opacity-90">
-                                    ${area.optimal_time 
-                                        ? `<span class="font-semibold">${area.optimal_time.charAt(0).toUpperCase() + area.optimal_time.slice(1)}</span>`
-                                        : '<span class="text-xs">Multiple times</span>'
-                                    }
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tabs -->
-                        <div class="flex flex-wrap gap-2 mb-4 border-b border-white/20 pb-2">
-                            ${methods.filter(m => m.has).map(m => renderTabButton(m)).join('')}
-                        </div>
-
-                        <!-- Content -->
-                        <div id="method-content-${uniqueId}" class="min-h-[350px]">
-                            ${hasWalking ? renderTabContent('walking', 'Walking Encounters', area.encounters.walking, true) : ''}
-                            ${renderTabContent('surf', 'Surf Encounters', area.encounters.surf)}
-                            ${renderTabContent('old_rod', 'Old Rod Encounters', area.encounters.old_rod)}
-                            ${renderTabContent('good_rod', 'Good Rod Encounters', area.encounters.good_rod)}
-                            ${renderTabContent('super_rod', 'Super Rod Encounters', area.encounters.super_rod)}
-                            ${renderTabContent('honey_tree', 'Honey Tree Encounters', area.encounters.honey_tree)}
-                            ${renderTabContent('poke_radar', 'Poké Radar Encounters', area.encounters.poke_radar)}
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-
-        // Show method tab
-        function showMethodTab(method, uniqueId, animate = true) {
-            const areaIdx = parseInt(uniqueId.replace('area-', ''));
-            activeMethodTabs[areaIdx] = method;
-            
-            document.querySelectorAll(`.method-tab-${uniqueId}`).forEach(t => {
-                t.classList.remove('bg-pokemon-blue');
-                t.classList.add('text-white/70');
-            });
-            
-            const activeBtn = document.querySelector(`.method-tab-${uniqueId}[onclick="showMethodTab('${method}', '${uniqueId}')"]`);
-            if (activeBtn) {
-                activeBtn.classList.add('bg-pokemon-blue');
-                activeBtn.classList.remove('text-white/70');
-            }
-            
-            // Animate transition
-            const allContents = document.querySelectorAll(`.method-content-${uniqueId}`);
-            const tabContent = document.getElementById(`tab-${method}-${uniqueId}`);
-            
-            if (animate && tabContent) {
-                // Fade out current, fade in new
-                allContents.forEach(c => {
-                    if (!c.classList.contains('hidden')) {
-                        c.style.opacity = '0';
-                        c.style.transform = 'translateX(-20px)';
-                        setTimeout(() => c.classList.add('hidden'), 150);
-                    }
-                });
-                
-                setTimeout(() => {
-                    tabContent.classList.remove('hidden');
-                    tabContent.style.opacity = '0';
-                    tabContent.style.transform = 'translateX(20px)';
-                    requestAnimationFrame(() => {
-                        tabContent.style.transition = 'opacity 0.15s ease-out, transform 0.15s ease-out';
-                        tabContent.style.opacity = '1';
-                        tabContent.style.transform = 'translateX(0)';
-                    });
-                }, 150);
-            } else {
-                allContents.forEach(c => c.classList.add('hidden'));
-                if (tabContent) {
-                    tabContent.classList.remove('hidden');
-                    tabContent.style.opacity = '1';
-                    tabContent.style.transform = 'translateX(0)';
-                }
-            }
-        }
-        
-        // Get available method tabs for an area
-        function getMethodTabs(uniqueId) {
-            const tabs = [];
-            document.querySelectorAll(`.method-tab-${uniqueId}`).forEach(btn => {
-                const onclick = btn.getAttribute('onclick');
-                const match = onclick?.match(/showMethodTab\('([^']+)'/);
-                if (match) tabs.push(match[1]);
-            });
-            return tabs;
-        }
-        
-        // Handle horizontal swipe for method tabs
-        function handleMethodSwipe(uniqueId, direction) {
-            const tabs = getMethodTabs(uniqueId);
-            if (tabs.length === 0) return false;
-            
-            const areaIdx = parseInt(uniqueId.replace('area-', ''));
-            const currentMethod = activeMethodTabs[areaIdx] || tabs[0];
-            const currentIndex = tabs.indexOf(currentMethod);
-            
-            let newIndex;
-            if (direction === 'left' && currentIndex < tabs.length - 1) {
-                newIndex = currentIndex + 1;
-            } else if (direction === 'right' && currentIndex > 0) {
-                newIndex = currentIndex - 1;
-            } else {
-                return false; // Already at first/last tab
-            }
-            
-            showMethodTab(tabs[newIndex], uniqueId);
-            return true;
-        }
-
-        // Render carousel without transitions (for initial load and after animation completes)
-        function renderCarouselNoTransition() {
-            const prevSlide = document.getElementById('area-slide-prev');
-            const currentSlide = document.getElementById('area-slide-current');
-            const nextSlide = document.getElementById('area-slide-next');
-            
-            // Disable transitions and reset classes
-            prevSlide.className = 'area-slide prev no-transition';
-            currentSlide.className = 'area-slide current no-transition';
-            nextSlide.className = 'area-slide next no-transition';
-            
-            // Render content
-            prevSlide.innerHTML = currentAreaIndex > 0 ? renderAreaCard(data.areas[currentAreaIndex - 1], currentAreaIndex - 1) : '';
-            currentSlide.innerHTML = renderAreaCard(data.areas[currentAreaIndex], currentAreaIndex);
-            nextSlide.innerHTML = currentAreaIndex < data.areas.length - 1 ? renderAreaCard(data.areas[currentAreaIndex + 1], currentAreaIndex + 1) : '';
-        }
-        
-        // Alias for backwards compatibility
-        function renderCarousel() {
-            renderCarouselNoTransition();
-        }
-
-        // Search functionality
-        function performSearch(query) {
-            if (!query.trim()) {
-                document.getElementById('search-results').classList.add('hidden');
-                document.getElementById('area-content').classList.remove('hidden');
-                return;
-            }
-
-            const results = [];
-            const queryLower = query.toLowerCase();
-
-            for (let areaIdx = 0; areaIdx < data.areas.length; areaIdx++) {
-                const area = data.areas[areaIdx];
-                
-                const checkEncounters = (encounters, method) => {
-                    if (!encounters) return;
-                    if (Array.isArray(encounters)) {
-                        for (const enc of encounters) {
-                            if (enc.pokemon.toLowerCase().includes(queryLower)) {
-                                results.push({ area, areaIdx, method, encounter: enc });
-                            }
-                        }
-                    } else {
-                        for (const time of ['morning', 'day', 'night']) {
-                            for (const enc of encounters[time] || []) {
-                                if (enc.pokemon.toLowerCase().includes(queryLower)) {
-                                    results.push({ area, areaIdx, method: `walking (${time})`, encounter: enc });
-                                }
-                            }
-                        }
-                    }
-                };
-
-                checkEncounters(area.encounters.walking, 'walking');
-                checkEncounters(area.encounters.surf, 'surf');
-                checkEncounters(area.encounters.old_rod, 'old_rod');
-                checkEncounters(area.encounters.good_rod, 'good_rod');
-                checkEncounters(area.encounters.super_rod, 'super_rod');
-                checkEncounters(area.encounters.honey_tree, 'honey_tree');
-                checkEncounters(area.encounters.poke_radar, 'poke_radar');
-            }
-
-            const container = document.getElementById('search-results-content');
-            if (results.length === 0) {
-                container.innerHTML = '<p class="text-gray-500 dark:text-gray-400">No Pokémon found matching your search.</p>';
-            } else {
-                container.innerHTML = results.map(r => `
-                    <div class="bg-white dark:bg-gray-700 rounded-lg shadow-sm p-4 mb-2 hover:shadow-md transition-shadow cursor-pointer" onclick="selectArea(${r.areaIdx})">
-                        <div class="flex items-center gap-3">
-                            <img 
-                                src="sprites/${r.encounter.pokedex_number}.png" 
-                                alt="${r.encounter.pokemon}"
-                                class="w-10 h-10"
-                                onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${r.encounter.pokedex_number}.png'"
-                            >
-                            <div class="flex-1">
-                                <div class="font-medium dark:text-white">${r.encounter.pokemon}</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">${r.area.area_name} • ${r.method}</div>
-                            </div>
-                            <div class="text-right">
-                                <div class="font-bold text-pokemon-blue">${r.encounter.catch_count} to catch</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">${r.encounter.encounter_rate}% • Lv. ${r.encounter.level_range}</div>
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
-            }
-
-            document.getElementById('search-results').classList.remove('hidden');
-            document.getElementById('area-content').classList.add('hidden');
-        }
-
-        // Smooth scroll handler
-        let horizontalScrollAccumulator = 0;
-        const HORIZONTAL_SCROLL_THRESHOLD = 250;
-        let horizontalSwipeCooldown = false;
-        
-        function handleScroll(e) {
-            if (isTransitioning) {
-                e.preventDefault();
-                return;
-            }
-            
-            // Don't handle if modal is open or searching
-            if (!document.getElementById('evo-modal').classList.contains('hidden')) return;
-            if (!document.getElementById('search-results').classList.contains('hidden')) return;
-
-            // Check for horizontal scrolling (for tab switching)
-            if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 5) {
-                e.preventDefault();
-                
-                if (horizontalSwipeCooldown) return;
-                
-                horizontalScrollAccumulator += e.deltaX;
-                
-                if (Math.abs(horizontalScrollAccumulator) > HORIZONTAL_SCROLL_THRESHOLD) {
-                    const uniqueId = `area-${currentAreaIndex}`;
-                    const direction = horizontalScrollAccumulator > 0 ? 'left' : 'right';
-                    
-                    let switched = false;
-                    
-                    // Check if walking tab is currently visible
-                    const walkingTabVisible = !document.getElementById(`tab-walking-${uniqueId}`)?.classList.contains('hidden');
-                    const walkingContainer = document.querySelector(`.walking-swipe-container-${uniqueId}`);
-                    
-                    if (walkingTabVisible && walkingContainer) {
-                        // Try to switch walking sub-tabs first
-                        switched = handleWalkingSwipe(uniqueId, direction);
-                        
-                        // If can't switch walking tabs (at edge), switch method tabs instead
-                        if (!switched) {
-                            switched = handleMethodSwipe(uniqueId, direction);
-                        }
-                    } else {
-                        // Not on walking tab, just switch method tabs
-                        switched = handleMethodSwipe(uniqueId, direction);
-                        
-                        // If switched to walking tab and going right (backward), jump to last walking sub-tab
-                        if (switched && direction === 'right') {
-                            const newWalkingContainer = document.querySelector(`.walking-swipe-container-${uniqueId}`);
-                            const newWalkingTabVisible = !document.getElementById(`tab-walking-${uniqueId}`)?.classList.contains('hidden');
-                            if (newWalkingTabVisible && newWalkingContainer) {
-                                const tabs = JSON.parse(newWalkingContainer.dataset.tabs || '[]');
-                                if (tabs.length > 1) {
-                                    const lastTabId = tabs[tabs.length - 1];
-                                    const lastBtn = document.querySelector(`.walking-tab-${uniqueId}[data-tab-index="${tabs.length - 1}"]`);
-                                    showWalkingTabById(lastBtn, lastTabId, uniqueId);
-                                }
-                            }
-                        }
-                    }
-                    
-                    horizontalScrollAccumulator = 0;
-                    
-                    // Add cooldown to prevent rapid switching
-                    if (switched) {
-                        horizontalSwipeCooldown = true;
-                        setTimeout(() => {
-                            horizontalSwipeCooldown = false;
-                        }, 400);
-                    }
-                }
-                return;
-            } else {
-                // Reset horizontal accumulator when scrolling vertically
-                horizontalScrollAccumulator = 0;
-            }
-
-            // Check if scrolling inside the card content
-            const cardInner = e.target.closest('.area-card-inner');
-            if (cardInner) {
-                const atTop = cardInner.scrollTop === 0;
-                const atBottom = cardInner.scrollTop + cardInner.clientHeight >= cardInner.scrollHeight - 5;
-                
-                // If scrolling down and not at bottom, let it scroll normally
-                if (e.deltaY > 0 && !atBottom) return;
-                // If scrolling up and not at top, let it scroll normally
-                if (e.deltaY < 0 && !atTop) return;
-            }
-
-            e.preventDefault();
-            
-            scrollAccumulator += e.deltaY;
-            
-            if (scrollAccumulator > SCROLL_THRESHOLD && currentAreaIndex < data.areas.length - 1) {
-                selectArea(currentAreaIndex + 1, 'down');
-            } else if (scrollAccumulator < -SCROLL_THRESHOLD && currentAreaIndex > 0) {
-                selectArea(currentAreaIndex - 1, 'up');
-            }
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then((reg) => console.log('Service worker registered'))
+                .catch((err) => console.log('Service worker registration failed:', err));
         }
 
         // Initialize
-        async function init() {
-            initDarkMode();
-            
-            try {
-                const [outputRes, evoRes] = await Promise.all([
-                    fetch('output.json'),
-                    fetch('evolutions.json')
-                ]);
-                
-                data = await outputRes.json();
-                evolutions = await evoRes.json();
-                
-                loadTrackingState();
-                renderAreaList();
-                renderCarousel();
-                renderPCBox();
-
-                // Search input handler
-                const searchInput = document.getElementById('search-input');
-                let searchTimeout;
-                searchInput.addEventListener('input', (e) => {
-                    clearTimeout(searchTimeout);
-                    searchTimeout = setTimeout(() => performSearch(e.target.value), 300);
-                });
-
-                // Area filter input handler
-                const areaSearchInput = document.getElementById('area-search-input');
-                areaSearchInput.addEventListener('input', (e) => {
-                    filterAreas(e.target.value);
-                });
-
-                // Close modal on backdrop click
-                document.getElementById('evo-modal').addEventListener('click', (e) => {
-                    if (e.target === document.getElementById('evo-modal')) {
-                        closeEvoModal();
-                    }
-                });
-
-                // Scroll to change areas
-                const mainContent = document.querySelector('main');
-                mainContent.addEventListener('wheel', handleScroll, { passive: false });
-
-                // Keyboard navigation
-                document.addEventListener('keydown', (e) => {
-                    if (e.target.tagName === 'INPUT') return;
-                    if (!document.getElementById('evo-modal').classList.contains('hidden')) return;
-                    if (isTransitioning) return;
-                    
-                    if (e.key === 'ArrowDown' || e.key === 'j') {
-                        if (currentAreaIndex < data.areas.length - 1) {
-                            selectArea(currentAreaIndex + 1, 'down');
-                            e.preventDefault();
-                        }
-                    } else if (e.key === 'ArrowUp' || e.key === 'k') {
-                        if (currentAreaIndex > 0) {
-                            selectArea(currentAreaIndex - 1, 'up');
-                            e.preventDefault();
-                        }
-                    }
-                });
-
-                // Hide nav hint after first interaction
-                const navHint = document.getElementById('nav-hint');
-                const hideHint = () => {
-                    navHint.style.opacity = '0';
-                    setTimeout(() => navHint.style.display = 'none', 300);
-                };
-                mainContent.addEventListener('wheel', hideHint, { once: true });
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') hideHint();
-                }, { once: true });
-
-            } catch (error) {
-                console.error('Failed to load data:', error);
-                document.getElementById('area-slide-current').innerHTML = `
-                    <div class="p-6 text-center text-red-500 bg-white rounded-xl">
-                        <p>Failed to load data. Make sure output.json and evolutions.json exist.</p>
-                        <p class="text-sm mt-2">${error.message}</p>
-                    </div>
-                `;
-            }
-        }
-
-        // Tooltip positioning for fixed tooltips
-        document.addEventListener('mouseover', (e) => {
-            const badge = e.target.closest('.badge-tooltip');
-            if (badge) {
-                const tooltip = badge.querySelector('.tooltip-text');
-                if (tooltip) {
-                    const rect = badge.getBoundingClientRect();
-                    
-                    // Show tooltip off-screen first to measure it
-                    tooltip.style.visibility = 'hidden';
-                    tooltip.style.display = 'block';
-                    tooltip.style.top = '0px';
-                    tooltip.style.left = '0px';
-                    
-                    // Force reflow to get dimensions
-                    const tooltipWidth = tooltip.offsetWidth;
-                    const tooltipHeight = tooltip.offsetHeight;
-                    
-                    // Position above the element
-                    let top = rect.top - tooltipHeight - 8;
-                    let left = rect.left + (rect.width / 2) - (tooltipWidth / 2);
-                    
-                    // Keep tooltip on screen
-                    if (top < 10) top = rect.bottom + 8;
-                    if (left < 10) left = 10;
-                    if (left + tooltipWidth > window.innerWidth - 10) {
-                        left = window.innerWidth - tooltipWidth - 10;
-                    }
-                    
-                    tooltip.style.top = top + 'px';
-                    tooltip.style.left = left + 'px';
-                    tooltip.style.visibility = 'visible';
-                }
-            }
-        });
-        
-        document.addEventListener('mouseout', (e) => {
-            const badge = e.target.closest('.badge-tooltip');
-            if (badge) {
-                const tooltip = badge.querySelector('.tooltip-text');
-                if (tooltip) {
-                    tooltip.style.display = 'none';
-                }
-            }
-        });
-
-        init();
+        initDarkMode();
+        renderGames();
     </script>
 </body>
 </html>

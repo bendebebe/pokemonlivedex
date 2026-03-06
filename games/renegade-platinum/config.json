@@ -1,0 +1,19 @@
+{
+  "id": "renegade-platinum",
+  "name": "Renegade Platinum",
+  "fullName": "Pokemon Renegade Platinum",
+  "generation": 4,
+  "baseGame": "platinum",
+  "region": "Sinnoh",
+  "coverImage": "images/pokemon-platinum.png",
+  "description": "A difficulty/enhancement hack of Pokemon Platinum with all 493 Pokemon available.",
+  "methodUnlocks": {
+    "walking": null,
+    "honey_tree": null,
+    "poke_radar": "Route 202",
+    "old_rod": "Route 202",
+    "good_rod": "Lost Tower",
+    "surf": "Route 219",
+    "super_rod": "Lake Acuity"
+  }
+}

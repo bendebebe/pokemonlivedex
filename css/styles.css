@@ -1,0 +1,148 @@
+.caught { filter: grayscale(0) !important; opacity: 1 !important; }
+.not-caught { filter: grayscale(100%); opacity: 0.5; }
+.evolved { border-color: #22c55e !important; background-color: rgba(34, 197, 94, 0.1); }
+.zero-catch { opacity: 0.4; }
+.sprite-hover:hover { transform: scale(1.1); }
+.pixelated { image-rendering: pixelated; }
+.area-morning { background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); color: #1f2937; }
+.area-day { background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); color: #1f2937; }
+.area-night { background: linear-gradient(135deg, #1A237E 0%, #311B92 100%); color: white; }
+.area-neutral { background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%); color: #1f2937; }
+
+/* Dark mode area styles - keep cards visible */
+.dark .area-morning { background: linear-gradient(135deg, #451a03 0%, #78350f 100%); color: white; }
+.dark .area-day { background: linear-gradient(135deg, #0c1929 0%, #1e3a5f 100%); color: white; }
+.dark .area-neutral { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); color: white; }
+
+/* Pokemon cards should be light/white to contrast with area backgrounds */
+.pokemon-card {
+    background: white;
+    color: #1f2937;
+}
+.dark .pokemon-card {
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #888; border-radius: 3px; }
+.dark .scrollbar-thin::-webkit-scrollbar-thumb { background: #555; }
+
+/* Tab content transitions */
+[class*="method-content-"] {
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+[class*="walking-swipe-track-"] {
+    transition: transform 0.3s ease-out;
+}
+
+/* Tooltip styles */
+.badge-tooltip {
+    position: relative;
+}
+.badge-tooltip .tooltip-text {
+    display: none;
+    position: fixed;
+    background: #1f2937;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 99999;
+    pointer-events: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Carousel styles */
+.carousel-container {
+    position: relative;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.area-slide {
+    position: absolute;
+    width: 100%;
+    max-width: 56rem;
+    padding: 1rem;
+    transform-origin: center center;
+    will-change: transform, opacity;
+}
+.area-slide.no-transition {
+    transition: none !important;
+}
+.area-slide.with-transition {
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+.area-slide.current {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+.area-slide.prev {
+    transform: translateY(-100%) scale(0.85);
+    opacity: 0;
+    z-index: 1;
+}
+.area-slide.next {
+    transform: translateY(100%) scale(0.85);
+    opacity: 0;
+    z-index: 1;
+}
+
+.area-card-inner {
+    overflow-y: visible;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Hide sidebar and PC box on mobile */
+    #sidebar, #pc-box-aside {
+        display: none;
+    }
+    
+    /* Full width main content */
+    main {
+        width: 100% !important;
+    }
+    
+    /* Show mobile tab bar */
+    #mobile-tab-bar {
+        display: flex !important;
+    }
+    
+    /* Adjust carousel height for mobile tab bar */
+    .carousel-container {
+        height: calc(100vh - 140px);
+    }
+    
+    /* Full screen mobile views */
+    #mobile-areas-view,
+    #mobile-pc-view {
+        position: fixed;
+        inset: 0;
+        z-index: 40;
+        background: inherit;
+        overflow-y: auto;
+    }
+    
+    /* Evolution modal full width on mobile */
+    #evo-modal {
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
+
+/* Desktop: hide mobile elements */
+@media (min-width: 769px) {
+    #mobile-tab-bar {
+        display: none !important;
+    }
+    #mobile-areas-view,
+    #mobile-pc-view {
+        display: none !important;
+    }
+}

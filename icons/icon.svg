@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="250" fill="#E53935"/>
+  
+  <!-- Top half (red) -->
+  <path d="M 6 256 A 250 250 0 0 1 506 256 Z" fill="#E53935"/>
+  
+  <!-- Bottom half (white) -->
+  <path d="M 6 256 A 250 250 0 0 0 506 256 Z" fill="#FFFFFF"/>
+  
+  <!-- Center line -->
+  <rect x="6" y="246" width="500" height="20" fill="#1f2937"/>
+  
+  <!-- Center circle outer -->
+  <circle cx="256" cy="256" r="80" fill="#1f2937"/>
+  
+  <!-- Center circle middle -->
+  <circle cx="256" cy="256" r="60" fill="#FFFFFF"/>
+  
+  <!-- Center circle inner -->
+  <circle cx="256" cy="256" r="35" fill="#1f2937"/>
+  
+  <!-- Highlight -->
+  <ellipse cx="180" cy="180" rx="60" ry="40" fill="rgba(255,255,255,0.3)" transform="rotate(-45 180 180)"/>
+</svg>
