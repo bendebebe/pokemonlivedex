@@ -132,21 +132,21 @@
             
             container.innerHTML = games.map(game => `
                 <a href="app.html?game=${game.id}" class="game-card block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-                    <div class="aspect-video bg-gradient-to-br from-pokemon-blue to-pokemon-red overflow-hidden">
+                    <div class="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 flex items-center justify-center min-h-[200px]">
                         <img 
                             src="${game.coverImage}" 
                             alt="${game.name}"
-                            class="w-full h-full object-cover"
+                            class="max-h-[180px] w-auto object-contain drop-shadow-2xl"
                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'flex items-center justify-center h-full text-white text-4xl font-bold\\'>${game.name.charAt(0)}</div>'"
                         >
                     </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">${game.name}</h3>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">${game.name}</h3>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">${game.region} Region - Gen ${game.generation}</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2 line-clamp-2">${game.description}</p>
-                        <div class="mt-4 flex items-center text-pokemon-blue font-medium text-sm">
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-3 line-clamp-2">${game.description}</p>
+                        <div class="mt-4 flex items-center text-pokemon-blue font-medium">
                             <span>Start Tracking</span>
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                             </svg>
                         </div>
@@ -156,16 +156,16 @@
             
             // Add "Coming Soon" placeholder
             container.innerHTML += `
-                <div class="game-card block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden opacity-60">
-                    <div class="aspect-video bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center">
-                        <svg class="w-16 h-16 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                <div class="game-card block bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden opacity-50 cursor-not-allowed">
+                    <div class="relative bg-gradient-to-br from-gray-400 to-gray-500 dark:from-gray-600 dark:to-gray-700 p-6 flex items-center justify-center min-h-[200px]">
+                        <svg class="w-20 h-20 text-gray-300 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                         </svg>
                     </div>
-                    <div class="p-4">
-                        <h3 class="text-lg font-bold text-gray-800 dark:text-white">More Games Coming Soon</h3>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">More Games Coming Soon</h3>
                         <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Stay tuned for more ROM hacks</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Support for additional games will be added in future updates.</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-3">Support for additional games will be added in future updates.</p>
                     </div>
                 </div>
             `;
