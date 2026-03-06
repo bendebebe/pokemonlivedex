@@ -91,16 +91,23 @@ def parse_encounters():
                     # Parse each level range
                     # Pattern: "4 - 5 (Walking)" or "20 - 40 (Surfing)" or "12 (Honey Tree)"
                     level_parts = re.findall(r'(\d+(?:\s*-\s*\d+)?)\s*\(([^)]+)\)', level_info)
-                    for level_range, encounter_type in level_parts:
-                        enc_type_lower = encounter_type.lower().strip()
-                        if 'walk' in enc_type_lower:
-                            levels['walking'] = parse_level_range(level_range)
-                        elif 'surf' in enc_type_lower:
-                            levels['surf'] = parse_level_range(level_range)
-                        elif 'honey' in enc_type_lower:
-                            levels['honey_tree'] = parse_level_range(level_range)
-                        else:
-                            levels[enc_type_lower] = parse_level_range(level_range)
+                    if level_parts:
+                        for level_range, encounter_type in level_parts:
+                            enc_type_lower = encounter_type.lower().strip()
+                            if 'walk' in enc_type_lower:
+                                levels['walking'] = parse_level_range(level_range)
+                            elif 'surf' in enc_type_lower:
+                                levels['surf'] = parse_level_range(level_range)
+                            elif 'honey' in enc_type_lower:
+                                levels['honey_tree'] = parse_level_range(level_range)
+                            else:
+                                levels[enc_type_lower] = parse_level_range(level_range)
+                    else:
+                        # No method specified, just a plain level range like "20 - 22"
+                        # Use it as walking level
+                        plain_range = re.search(r'(\d+(?:\s*-\s*\d+)?)', level_info)
+                        if plain_range:
+                            levels['walking'] = parse_level_range(plain_range.group(1))
                 
                 current_area = {
                     "area_name": area_name,

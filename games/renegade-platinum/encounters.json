@@ -3926,133 +3926,135 @@
     },
     {
       "area_name": "Wayward Cave (Both)",
-      "levels": {},
+      "levels": {
+        "walking": "20-22"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Zubat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Geodude",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Gible",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Baltoy",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Sandshrew",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Onix",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Sableye",
               "rate": 5,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Mawile",
               "rate": 5,
-              "level_range": ""
+              "level_range": "20-22"
             }
           ],
           "day": [
             {
               "pokemon": "Zubat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Geodude",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Gible",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Baltoy",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Sandshrew",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Onix",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Sableye",
               "rate": 5,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Mawile",
               "rate": 5,
-              "level_range": ""
+              "level_range": "20-22"
             }
           ],
           "night": [
             {
               "pokemon": "Zubat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Geodude",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Gible",
               "rate": 20,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Baltoy",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Sandshrew",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Onix",
               "rate": 10,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Sableye",
               "rate": 5,
-              "level_range": ""
+              "level_range": "20-22"
             },
             {
               "pokemon": "Mawile",
               "rate": 5,
-              "level_range": ""
+              "level_range": "20-22"
             }
           ]
         },
@@ -4708,133 +4710,135 @@
     },
     {
       "area_name": "Trophy Garden",
-      "levels": {},
+      "levels": {
+        "walking": "24-26"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Pichu",
               "rate": 20,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Pikachu",
               "rate": 20,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Cleffa",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Igglybuff",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Togepi",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Porygon",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Happiny",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Eevee",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             }
           ],
           "day": [
             {
               "pokemon": "Pichu",
               "rate": 20,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Pikachu",
               "rate": 20,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Cleffa",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Igglybuff",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Togepi",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Porygon",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Happiny",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Eevee",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             }
           ],
           "night": [
             {
               "pokemon": "Pichu",
               "rate": 20,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Pikachu",
               "rate": 20,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Cleffa",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Igglybuff",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Togepi",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Porygon",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Happiny",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             },
             {
               "pokemon": "Eevee",
               "rate": 10,
-              "level_range": ""
+              "level_range": "24-26"
             }
           ]
         },
@@ -4847,7 +4851,7 @@
           {
             "pokemon": "Castform",
             "rate": 22,
-            "level_range": ""
+            "level_range": "24-26"
           }
         ]
       }
@@ -5074,133 +5078,135 @@
     },
     {
       "area_name": "Lost Tower",
-      "levels": {},
+      "levels": {
+        "walking": "26-30"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Shuppet",
               "rate": 20,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Duskull",
               "rate": 20,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Golbat",
               "rate": 15,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Haunter",
               "rate": 15,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Murkrow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Misdreavus",
               "rate": 10,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Dusclops",
               "rate": 5,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Banette",
               "rate": 5,
-              "level_range": ""
+              "level_range": "26-30"
             }
           ],
           "day": [
             {
               "pokemon": "Shuppet",
               "rate": 20,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Duskull",
               "rate": 20,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Golbat",
               "rate": 15,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Haunter",
               "rate": 15,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Murkrow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Misdreavus",
               "rate": 10,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Dusclops",
               "rate": 5,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Banette",
               "rate": 5,
-              "level_range": ""
+              "level_range": "26-30"
             }
           ],
           "night": [
             {
               "pokemon": "Shuppet",
               "rate": 20,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Duskull",
               "rate": 20,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Golbat",
               "rate": 15,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Haunter",
               "rate": 15,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Murkrow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Misdreavus",
               "rate": 10,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Dusclops",
               "rate": 5,
-              "level_range": ""
+              "level_range": "26-30"
             },
             {
               "pokemon": "Banette",
               "rate": 5,
-              "level_range": ""
+              "level_range": "26-30"
             }
           ]
         },
@@ -5214,28 +5220,30 @@
     },
     {
       "area_name": "Solaceon Ruins",
-      "levels": {},
+      "levels": {
+        "walking": "20-30"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Unown",
               "rate": 100,
-              "level_range": ""
+              "level_range": "20-30"
             }
           ],
           "day": [
             {
               "pokemon": "Unown",
               "rate": 100,
-              "level_range": ""
+              "level_range": "20-30"
             }
           ],
           "night": [
             {
               "pokemon": "Unown",
               "rate": 100,
-              "level_range": ""
+              "level_range": "20-30"
             }
           ]
         },
@@ -5784,118 +5792,120 @@
     },
     {
       "area_name": "Maniac Tunnel",
-      "levels": {},
+      "levels": {
+        "walking": "28-32"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Diglett",
               "rate": 25,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Whismur",
               "rate": 20,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Hippopotas",
               "rate": 15,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Trapinch",
               "rate": 15,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Loudred",
               "rate": 10,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Ditto",
               "rate": 10,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Dugtrio",
               "rate": 5,
-              "level_range": ""
+              "level_range": "28-32"
             }
           ],
           "day": [
             {
               "pokemon": "Diglett",
               "rate": 25,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Whismur",
               "rate": 20,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Hippopotas",
               "rate": 15,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Trapinch",
               "rate": 15,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Loudred",
               "rate": 10,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Ditto",
               "rate": 10,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Dugtrio",
               "rate": 5,
-              "level_range": ""
+              "level_range": "28-32"
             }
           ],
           "night": [
             {
               "pokemon": "Diglett",
               "rate": 25,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Whismur",
               "rate": 20,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Hippopotas",
               "rate": 15,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Trapinch",
               "rate": 15,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Loudred",
               "rate": 10,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Ditto",
               "rate": 10,
-              "level_range": ""
+              "level_range": "28-32"
             },
             {
               "pokemon": "Dugtrio",
               "rate": 5,
-              "level_range": ""
+              "level_range": "28-32"
             }
           ]
         },
@@ -5909,88 +5919,90 @@
     },
     {
       "area_name": "Valor Lakefront",
-      "levels": {},
+      "levels": {
+        "walking": "31-33"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Girafarig",
               "rate": 30,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Bibarel",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Nidorina",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Nidorino",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Kricketune",
               "rate": 10,
-              "level_range": ""
+              "level_range": "31-33"
             }
           ],
           "day": [
             {
               "pokemon": "Girafarig",
               "rate": 30,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Bibarel",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Nidorina",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Nidorino",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Kricketune",
               "rate": 10,
-              "level_range": ""
+              "level_range": "31-33"
             }
           ],
           "night": [
             {
               "pokemon": "Girafarig",
               "rate": 30,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Bibarel",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Nidorina",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Nidorino",
               "rate": 20,
-              "level_range": ""
+              "level_range": "31-33"
             },
             {
               "pokemon": "Kricketune",
               "rate": 10,
-              "level_range": ""
+              "level_range": "31-33"
             }
           ]
         },
@@ -6003,7 +6015,7 @@
           {
             "pokemon": "Venomoth",
             "rate": 22,
-            "level_range": ""
+            "level_range": "31-33"
           }
         ]
       }
@@ -8390,133 +8402,135 @@
     },
     {
       "area_name": "Iron Island ~ Inside ~ 1F, B1F",
-      "levels": {},
+      "levels": {
+        "walking": "41-43"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Graveler",
               "rate": 25,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Golbat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Lairon",
               "rate": 15,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Mawile",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Sableye",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Nosepass",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Rhydon",
               "rate": 5,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Steelix",
               "rate": 5,
-              "level_range": ""
+              "level_range": "41-43"
             }
           ],
           "day": [
             {
               "pokemon": "Graveler",
               "rate": 25,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Golbat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Lairon",
               "rate": 15,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Mawile",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Sableye",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Nosepass",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Rhydon",
               "rate": 5,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Steelix",
               "rate": 5,
-              "level_range": ""
+              "level_range": "41-43"
             }
           ],
           "night": [
             {
               "pokemon": "Graveler",
               "rate": 25,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Golbat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Lairon",
               "rate": 15,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Mawile",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Sableye",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Nosepass",
               "rate": 10,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Rhydon",
               "rate": 5,
-              "level_range": ""
+              "level_range": "41-43"
             },
             {
               "pokemon": "Steelix",
               "rate": 5,
-              "level_range": ""
+              "level_range": "41-43"
             }
           ]
         },
@@ -8530,133 +8544,135 @@
     },
     {
       "area_name": "Iron Island ~ Inside ~ B2F, B3F",
-      "levels": {},
+      "levels": {
+        "walking": "43-45"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Graveler",
               "rate": 25,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Golbat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Lairon",
               "rate": 15,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Mawile",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Sableye",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Nosepass",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Rhydon",
               "rate": 5,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Steelix",
               "rate": 5,
-              "level_range": ""
+              "level_range": "43-45"
             }
           ],
           "day": [
             {
               "pokemon": "Graveler",
               "rate": 25,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Golbat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Lairon",
               "rate": 15,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Mawile",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Sableye",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Nosepass",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Rhydon",
               "rate": 5,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Steelix",
               "rate": 5,
-              "level_range": ""
+              "level_range": "43-45"
             }
           ],
           "night": [
             {
               "pokemon": "Graveler",
               "rate": 25,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Golbat",
               "rate": 20,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Lairon",
               "rate": 15,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Mawile",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Sableye",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Nosepass",
               "rate": 10,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Rhydon",
               "rate": 5,
-              "level_range": ""
+              "level_range": "43-45"
             },
             {
               "pokemon": "Steelix",
               "rate": 5,
-              "level_range": ""
+              "level_range": "43-45"
             }
           ]
         },
@@ -8670,118 +8686,120 @@
     },
     {
       "area_name": "Route 217",
-      "levels": {},
+      "levels": {
+        "walking": "44-48"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Piloswine",
               "rate": 30,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Snorunt",
               "rate": 20,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Sneasel",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Abomasnow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Glalie",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Delibird",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             }
           ],
           "day": [
             {
               "pokemon": "Piloswine",
               "rate": 30,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Snorunt",
               "rate": 20,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Sneasel",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Abomasnow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Glalie",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Delibird",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             }
           ],
           "night": [
             {
               "pokemon": "Piloswine",
               "rate": 30,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Snorunt",
               "rate": 20,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Sneasel",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Abomasnow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Glalie",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             },
             {
               "pokemon": "Delibird",
               "rate": 10,
-              "level_range": ""
+              "level_range": "44-48"
             }
           ]
         },
@@ -8794,125 +8812,127 @@
           {
             "pokemon": "Froslass",
             "rate": 22,
-            "level_range": ""
+            "level_range": "44-48"
           }
         ]
       }
     },
     {
       "area_name": "Acuity Lakefront",
-      "levels": {},
+      "levels": {
+        "walking": "45-49"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Piloswine",
               "rate": 30,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Snorunt",
               "rate": 20,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Sneasel",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Abomasnow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Glalie",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Delibird",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             }
           ],
           "day": [
             {
               "pokemon": "Piloswine",
               "rate": 30,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Snorunt",
               "rate": 20,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Sneasel",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Abomasnow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Glalie",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Delibird",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             }
           ],
           "night": [
             {
               "pokemon": "Piloswine",
               "rate": 30,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Snorunt",
               "rate": 20,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Sneasel",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Abomasnow",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Glalie",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             },
             {
               "pokemon": "Delibird",
               "rate": 10,
-              "level_range": ""
+              "level_range": "45-49"
             }
           ]
         },
@@ -8925,140 +8945,142 @@
           {
             "pokemon": "Froslass",
             "rate": 22,
-            "level_range": ""
+            "level_range": "45-49"
           }
         ]
       }
     },
     {
       "area_name": "Snowpoint Temple",
-      "levels": {},
+      "levels": {
+        "walking": "47-50"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Golbat",
               "rate": 25,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Graveler",
               "rate": 20,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Sneasel",
               "rate": 20,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Steelix",
               "rate": 10,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Glalie",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Froslass",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Weavile",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             }
           ],
           "day": [
             {
               "pokemon": "Golbat",
               "rate": 25,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Graveler",
               "rate": 20,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Sneasel",
               "rate": 20,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Steelix",
               "rate": 10,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Glalie",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Froslass",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Weavile",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             }
           ],
           "night": [
             {
               "pokemon": "Golbat",
               "rate": 25,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Graveler",
               "rate": 20,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Sneasel",
               "rate": 20,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Steelix",
               "rate": 10,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Jynx",
               "rate": 10,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Glalie",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Froslass",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             },
             {
               "pokemon": "Weavile",
               "rate": 5,
-              "level_range": ""
+              "level_range": "47-50"
             }
           ]
         },
@@ -9524,103 +9546,105 @@
     },
     {
       "area_name": "Mt. Coronet ~ Snow Area",
-      "levels": {},
+      "levels": {
+        "walking": "50-52"
+      },
       "encounters": {
         "walking": {
           "morning": [
             {
               "pokemon": "Abomasnow",
               "rate": 30,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Medicham",
               "rate": 20,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Loudred",
               "rate": 20,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Absol",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Donphan",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Ursaring",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             }
           ],
           "day": [
             {
               "pokemon": "Abomasnow",
               "rate": 30,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Medicham",
               "rate": 20,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Loudred",
               "rate": 20,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Absol",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Donphan",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Ursaring",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             }
           ],
           "night": [
             {
               "pokemon": "Abomasnow",
               "rate": 30,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Medicham",
               "rate": 20,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Loudred",
               "rate": 20,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Absol",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Donphan",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             },
             {
               "pokemon": "Ursaring",
               "rate": 10,
-              "level_range": ""
+              "level_range": "50-52"
             }
           ]
         },
@@ -9633,7 +9657,7 @@
           {
             "pokemon": "Clefable",
             "rate": 22,
-            "level_range": ""
+            "level_range": "50-52"
           }
         ]
       }

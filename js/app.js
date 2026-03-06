@@ -61,6 +61,10 @@ function getAreaIndexKey() {
     return `pokemonLiveDex_${gameId}_areaIndex`;
 }
 
+function getTabsKey() {
+    return `pokemonLiveDex_${gameId}_tabs`;
+}
+
 // Load tracking state from localStorage
 function loadTrackingState() {
     const saved = localStorage.getItem(getStorageKey());
@@ -72,6 +76,14 @@ function loadTrackingState() {
     const savedArea = localStorage.getItem(getAreaIndexKey());
     if (savedArea) {
         currentAreaIndex = parseInt(savedArea, 10) || 0;
+    }
+    
+    // Load saved tab states
+    const savedTabs = localStorage.getItem(getTabsKey());
+    if (savedTabs) {
+        const tabData = JSON.parse(savedTabs);
+        activeMethodTabs = tabData.method || {};
+        activeWalkingTabs = tabData.walking || {};
     }
 }
 
@@ -85,6 +97,14 @@ function saveTrackingState() {
 // Save current area index
 function saveAreaIndex() {
     localStorage.setItem(getAreaIndexKey(), currentAreaIndex.toString());
+}
+
+// Save tab states
+function saveTabState() {
+    localStorage.setItem(getTabsKey(), JSON.stringify({
+        method: activeMethodTabs,
+        walking: activeWalkingTabs
+    }));
 }
 
 // Get Pokemon tracking state
@@ -559,11 +579,45 @@ function getTimeClass(optimalTime) {
     }
 }
 
+// Render Pokemon grid with catch/skip sections
+function renderPokemonGrid(pokemonList, gridClass) {
+    // Catch here: has catch_count > 0 AND no better opportunity
+    const catchHere = pokemonList.filter(p => p.catch_count > 0 && !p.better_opportunity);
+    // Skip: either already sourced (catch_count === 0) OR has better opportunity elsewhere
+    const skipHere = pokemonList.filter(p => p.catch_count === 0 || p.better_opportunity);
+    
+    let html = '';
+    
+    if (catchHere.length > 0) {
+        html += `<div class="${gridClass}">${catchHere.map(p => renderPokemonCard(p)).join('')}</div>`;
+    }
+    
+    if (skipHere.length > 0) {
+        html += `
+            <div class="skip-divider flex items-center gap-3 my-4 px-2">
+                <div class="flex-1 border-t border-dashed border-gray-400 dark:border-gray-600"></div>
+                <span class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-medium">Skip</span>
+                <div class="flex-1 border-t border-dashed border-gray-400 dark:border-gray-600"></div>
+            </div>
+            <div class="${gridClass} opacity-60">${skipHere.map(p => renderPokemonCard(p)).join('')}</div>
+        `;
+    }
+    
+    return html;
+}
+
 // Render a Pokemon card as a compact grid box
 function renderPokemonCard(pokemon) {
     const state = getPokemonState(pokemon.pokedex_number);
-    const zeroCatch = pokemon.catch_count === 0;
-    const caughtClass = (state.count || 0) > 0 ? 'caught' : 'not-caught';
+    const owned = state.count || 0;
+    const catchHere = pokemon.catch_count;  // How many to catch at THIS location
+    const zeroCatch = catchHere === 0;
+    const caughtClass = owned > 0 ? 'caught' : 'not-caught';
+    
+    // Calculate total needed for living dex (1 for this + 1 for each evolution)
+    const line = getEvolutionLine(pokemon.pokemon);
+    const totalNeeded = line.length;  // Need 1 of each in the evolution line
+    const isComplete = owned >= totalNeeded;
     
     const hasWarning = pokemon.above_evo_warning;
     const hasBetter = pokemon.better_opportunity;
@@ -574,7 +628,8 @@ function renderPokemonCard(pokemon) {
         `${pokemon.pokemon} #${pokemon.pokedex_number}`,
         `${pokemon.encounter_rate}% encounter rate`,
         `Level ${pokemon.level_range}`,
-        `Catch ${pokemon.catch_count} for living dex`
+        `${owned}/${totalNeeded} for living dex`,
+        catchHere > 0 ? `Catch ${catchHere} here` : `Already sourced`
     ];
     if (hasWarning) {
         tooltipLines.push(`Warning: Over evolution level`);
@@ -582,16 +637,28 @@ function renderPokemonCard(pokemon) {
     if (hasBetter) {
         tooltipLines.push(`Better: ${pokemon.better_opportunity.area} (${pokemon.better_opportunity.encounter_rate}%)`);
     }
+    
+    // Badge styling: green if complete, blue if in progress, gray if not started/sourced
+    let badgeClass;
+    if (isComplete) {
+        badgeClass = 'bg-green-500 text-white';
+    } else if (owned > 0) {
+        badgeClass = 'bg-pokemon-blue text-white';
+    } else if (catchHere > 0) {
+        badgeClass = 'bg-gray-200 text-gray-500';
+    } else {
+        badgeClass = 'bg-gray-200 text-gray-400';
+    }
 
     return `
         <div 
             class="pokemon-card badge-tooltip relative flex flex-col items-center p-4 rounded-xl shadow-sm ${zeroCatch ? 'zero-catch' : ''} hover:shadow-lg hover:scale-105 transition-all cursor-pointer"
             onclick="openEvoModal('${pokemon.pokemon}', ${pokemon.pokedex_number})"
         >
-            <span class="tooltip-text" style="white-space: normal; width: 200px; text-align: left; line-height: 1.4;">${tooltipLines.join('<br>')}</span>
+            <span class="tooltip-text" style="display:none; position:fixed; background:#1f2937; color:white; padding:8px 12px; border-radius:6px; font-size:12px; white-space:normal; line-height:1.4; text-align:left; width:max-content; max-width:220px; z-index:99999; pointer-events:none; box-shadow:0 4px 12px rgba(0,0,0,0.3);">${tooltipLines.join('<br>')}</span>
             
-            <div class="absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shadow ${pokemon.catch_count > 0 ? 'bg-pokemon-blue text-white' : 'bg-gray-200 text-gray-500'}" style="z-index: 10;">
-                ${pokemon.catch_count}
+            <div class="absolute -top-2 -right-2 min-w-[28px] h-7 px-1 rounded-full flex items-center justify-center text-xs font-bold shadow ${badgeClass}" style="z-index: 10;">
+                ${owned}/${totalNeeded}
             </div>
             
             <div class="sprite-hover transition-transform ${caughtClass} mt-2">
@@ -632,7 +699,7 @@ function renderEncounterSection(title, encounters, isWalking = false, areaIdx, i
     const isMobile = window.innerWidth < 768;
     const gridClass = isMobile 
         ? 'flex flex-wrap gap-2 p-2 justify-center'
-        : 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 p-4 min-h-[300px] content-start';
+        : 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 p-4 content-start';
     
     let content = '';
     if (isWalking) {
@@ -704,8 +771,8 @@ function renderEncounterSection(title, encounters, isWalking = false, areaIdx, i
             <div class="walking-swipe-container-${uniqueId} relative overflow-hidden" data-tabs='${JSON.stringify(tabIds)}' data-current="0">
                 <div class="walking-swipe-track-${uniqueId} flex transition-transform duration-300 ease-out">
                     ${contents.map((c, i) => `
-                        <div id="walking-${c.id}-${uniqueId}" data-tab-index="${i}" class="walking-content-${uniqueId} ${gridClass} flex-shrink-0 w-full">
-                            ${c.pokemon.map(p => renderPokemonCard(p)).join('')}
+                        <div id="walking-${c.id}-${uniqueId}" data-tab-index="${i}" class="walking-content-${uniqueId} flex-shrink-0 w-full">
+                            ${renderPokemonGrid(c.pokemon, gridClass)}
                         </div>
                     `).join('')}
                 </div>
@@ -714,11 +781,7 @@ function renderEncounterSection(title, encounters, isWalking = false, areaIdx, i
         
         content = `<div>${tabsHtml}${contentsHtml}</div>`;
     } else {
-        content = `
-            <div class="${gridClass}">
-                ${encounters.map(p => renderPokemonCard(p)).join('')}
-            </div>
-        `;
+        content = renderPokemonGrid(encounters, gridClass);
     }
 
     return `<div>${content}</div>`;
@@ -728,6 +791,7 @@ function renderEncounterSection(title, encounters, isWalking = false, areaIdx, i
 function showWalkingTabById(btn, tabId, uniqueId, animate = true) {
     const areaIdx = parseInt(uniqueId.replace('area-', ''));
     activeWalkingTabs[areaIdx] = tabId;
+    saveTabState();
     
     document.querySelectorAll(`.walking-tab-${uniqueId}`).forEach(t => {
         t.classList.remove('border-pokemon-yellow', 'border-b-2', 'text-white');
@@ -865,6 +929,7 @@ function renderAreaCard(area, areaIdx) {
 function showMethodTab(method, uniqueId, animate = true) {
     const areaIdx = parseInt(uniqueId.replace('area-', ''));
     activeMethodTabs[areaIdx] = method;
+    saveTabState();
     
     document.querySelectorAll(`.method-tab-${uniqueId}`).forEach(t => {
         t.classList.remove('bg-pokemon-blue');
@@ -1369,47 +1434,93 @@ async function init() {
     }
 }
 
-// Tooltip positioning for fixed tooltips
-document.addEventListener('mouseover', (e) => {
-    const badge = e.target.closest('.badge-tooltip');
-    if (badge) {
-        const tooltip = badge.querySelector('.tooltip-text');
-        if (tooltip) {
-            const rect = badge.getBoundingClientRect();
-            
-            tooltip.style.visibility = 'hidden';
-            tooltip.style.display = 'block';
-            tooltip.style.top = '0px';
-            tooltip.style.left = '0px';
-            
-            const tooltipWidth = tooltip.offsetWidth;
-            const tooltipHeight = tooltip.offsetHeight;
-            
-            let top = rect.top - tooltipHeight - 8;
-            let left = rect.left + (rect.width / 2) - (tooltipWidth / 2);
-            
-            if (top < 10) top = rect.bottom + 8;
-            if (left < 10) left = 10;
-            if (left + tooltipWidth > window.innerWidth - 10) {
-                left = window.innerWidth - tooltipWidth - 10;
-            }
-            
-            tooltip.style.top = top + 'px';
-            tooltip.style.left = left + 'px';
-            tooltip.style.visibility = 'visible';
+// Tooltip show/hide functions
+function showTooltip(card) {
+    try {
+        const tooltip = card.querySelector('.tooltip-text');
+        if (!tooltip) return;
+        
+        // Move tooltip to body to avoid overflow clipping
+        document.body.appendChild(tooltip);
+        tooltip.dataset.cardId = card.dataset.pokemonId || Math.random();
+        card.dataset.pokemonId = tooltip.dataset.cardId;
+        
+        const cardRect = card.getBoundingClientRect();
+        
+        // Make visible and measure
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.display = 'block';
+        tooltip.style.top = '0';
+        tooltip.style.left = '0';
+        
+        const tooltipHeight = tooltip.offsetHeight;
+        const tooltipWidth = tooltip.offsetWidth;
+        
+        let top, left;
+        if (cardRect.top < tooltipHeight + 20) {
+            top = cardRect.bottom + 8;
+        } else {
+            top = cardRect.top - tooltipHeight - 8;
         }
+        
+        left = cardRect.left + (cardRect.width / 2) - (tooltipWidth / 2);
+        
+        // Keep on screen
+        if (left < 10) left = 10;
+        if (left + tooltipWidth > window.innerWidth - 10) {
+            left = window.innerWidth - tooltipWidth - 10;
+        }
+        if (top < 10) top = cardRect.bottom + 8;
+        
+        tooltip.style.top = top + 'px';
+        tooltip.style.left = left + 'px';
+        tooltip.style.visibility = 'visible';
+    } catch (e) {
+        console.error('showTooltip error:', e);
     }
-});
+}
 
-document.addEventListener('mouseout', (e) => {
-    const badge = e.target.closest('.badge-tooltip');
-    if (badge) {
-        const tooltip = badge.querySelector('.tooltip-text');
-        if (tooltip) {
-            tooltip.style.display = 'none';
+function hideTooltip(card) {
+    // Find tooltip either in card or in body
+    let tooltip = card.querySelector('.tooltip-text');
+    if (!tooltip && card.dataset.pokemonId) {
+        tooltip = document.body.querySelector(`.tooltip-text[data-card-id="${card.dataset.pokemonId}"]`);
+    }
+    if (tooltip) {
+        tooltip.style.display = 'none';
+        tooltip.style.visibility = 'hidden';
+        // Move back to card
+        if (tooltip.parentElement === document.body) {
+            card.appendChild(tooltip);
         }
     }
+}
+
+// Attach tooltip listeners to all pokemon cards
+function attachTooltipListeners() {
+    document.querySelectorAll('.pokemon-card').forEach(card => {
+        card.removeEventListener('mouseenter', card._tooltipEnter);
+        card.removeEventListener('mouseleave', card._tooltipLeave);
+        
+        card._tooltipEnter = () => showTooltip(card);
+        card._tooltipLeave = () => hideTooltip(card);
+        
+        card.addEventListener('mouseenter', card._tooltipEnter);
+        card.addEventListener('mouseleave', card._tooltipLeave);
+    });
+}
+
+// Initial call
+setTimeout(attachTooltipListeners, 1000);
+
+// Call after DOM updates
+const originalRenderArea = typeof renderArea === 'function' ? renderArea : null;
+
+// Observer to attach listeners when cards are added
+const tooltipObserver = new MutationObserver(() => {
+    attachTooltipListeners();
 });
+tooltipObserver.observe(document.body, { childList: true, subtree: true });
 
 // Register service worker
 if ('serviceWorker' in navigator) {

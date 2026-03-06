@@ -18,6 +18,7 @@
 .pokemon-card {
     background: white;
     color: #1f2937;
+    overflow: visible !important;
 }
 .dark .pokemon-card {
     background: rgba(255, 255, 255, 0.95);
@@ -39,19 +40,34 @@
 /* Tooltip styles */
 .badge-tooltip {
     position: relative;
+    overflow: visible !important;
 }
 .badge-tooltip .tooltip-text {
-    display: none;
-    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px;
     background: #1f2937;
     color: white;
     padding: 8px 12px;
     border-radius: 6px;
     font-size: 12px;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.4;
+    text-align: left;
+    width: max-content;
+    max-width: 220px;
     z-index: 99999;
     pointer-events: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+.badge-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Carousel styles */
@@ -176,6 +192,14 @@
         font-size: 0.6rem !important;
         top: -4px !important;
         right: -4px !important;
+    }
+    
+    /* Disable tooltips on mobile - they don't work well with touch */
+    .badge-tooltip .tooltip-text {
+        display: none !important;
+    }
+    .badge-tooltip:hover .tooltip-text {
+        display: none !important;
     }
     
     /* Full screen mobile views */
