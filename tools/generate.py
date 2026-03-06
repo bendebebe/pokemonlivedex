@@ -513,8 +513,9 @@ def main():
                 )
                 processed_encounters['walking'][time_of_day].append(processed)
                 
-                # Mark for sourcing if catch_count > 0
-                if processed['catch_count'] > 0:
+                # Mark for sourcing if catch_count > 0 AND no better opportunity
+                # If there's a better opportunity, don't source here - wait for the better location
+                if processed['catch_count'] > 0 and not processed['better_opportunity']:
                     evo_line = get_full_evolution_line(enc['pokemon'], pokemon_by_name)
                     for name, _ in evo_line:
                         newly_sourced_by_method['walking'].add(name)
@@ -530,8 +531,8 @@ def main():
                 )
                 processed_encounters[method].append(processed)
                 
-                # Only mark as sourced if this method is unlocked
-                if processed['catch_count'] > 0 and method_unlocked:
+                # Only mark as sourced if this method is unlocked AND no better opportunity
+                if processed['catch_count'] > 0 and method_unlocked and not processed['better_opportunity']:
                     evo_line = get_full_evolution_line(enc['pokemon'], pokemon_by_name)
                     for name, _ in evo_line:
                         newly_sourced_by_method[method].add(name)

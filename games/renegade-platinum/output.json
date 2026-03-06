@@ -1360,10 +1360,19 @@
               "pokedex_number": 163,
               "encounter_rate": 20,
               "level_range": "5-6",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Noctowl",
+                  "evo_level": 20,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Rattata",
@@ -2302,13 +2311,22 @@
               "pokedex_number": 54,
               "encounter_rate": 10,
               "level_range": "6-8",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Route 203",
                 "encounter_rate": 90
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Golduck",
+                  "evo_level": 33,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Sandshrew",
@@ -2418,13 +2436,22 @@
               "pokedex_number": 54,
               "encounter_rate": 10,
               "level_range": "6-8",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Route 203",
                 "encounter_rate": 90
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Golduck",
+                  "evo_level": 33,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Sandshrew",
@@ -2534,13 +2561,22 @@
               "pokedex_number": 54,
               "encounter_rate": 10,
               "level_range": "6-8",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Route 203",
                 "encounter_rate": 90
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Golduck",
+                  "evo_level": 33,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Sandshrew",
@@ -3113,23 +3149,41 @@
             "pokedex_number": 54,
             "encounter_rate": 90,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Golduck",
             "pokedex_number": 55,
             "encounter_rate": 10,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sendoff Spring",
               "encounter_rate": 100
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -3148,10 +3202,19 @@
             "pokedex_number": 341,
             "encounter_rate": 35,
             "level_range": "10",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Crawdaunt",
+                "evo_level": 30,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "good_rod": [
@@ -3170,10 +3233,19 @@
             "pokedex_number": 341,
             "encounter_rate": 35,
             "level_range": "25",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Crawdaunt",
+                "evo_level": 30,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "super_rod": [
@@ -3192,10 +3264,19 @@
             "pokedex_number": 342,
             "encounter_rate": 35,
             "level_range": "50",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Crawdaunt",
+                "evo_level": 30,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "honey_tree": [],
@@ -4004,20 +4085,50 @@
             "pokedex_number": 11,
             "encounter_rate": 20,
             "level_range": "21",
-            "catch_count": 0,
+            "catch_count": 3,
             "above_evo_warning": "Already at/above Lv10 for Butterfree",
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Metapod",
+                "evo_level": 7,
+                "next_area": "Route 204 ~ North",
+                "level_range": "11-12",
+                "encounter_rate": 10
+              },
+              {
+                "evolves_into": "Butterfree",
+                "evo_level": 10,
+                "next_area": "Route 204 ~ North",
+                "level_range": "11-12",
+                "encounter_rate": 10
+              }
+            ]
           },
           {
             "pokemon": "Kakuna",
             "pokedex_number": 14,
             "encounter_rate": 20,
             "level_range": "21",
-            "catch_count": 0,
+            "catch_count": 3,
             "above_evo_warning": "Already at/above Lv10 for Beedrill",
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Kakuna",
+                "evo_level": 7,
+                "next_area": "Route 204 ~ North",
+                "level_range": "11-12",
+                "encounter_rate": 10
+              },
+              {
+                "evolves_into": "Beedrill",
+                "evo_level": 10,
+                "next_area": "Route 204 ~ North",
+                "level_range": "11-12",
+                "encounter_rate": 10
+              }
+            ]
           },
           {
             "pokemon": "Munchlax",
@@ -4464,13 +4575,30 @@
               "pokedex_number": 328,
               "encounter_rate": 10,
               "level_range": "10-11",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Maniac Tunnel",
                 "encounter_rate": 15
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Vibrava",
+                  "evo_level": 30,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                },
+                {
+                  "evolves_into": "Flygon",
+                  "evo_level": 45,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             }
           ],
           "day": [
@@ -4529,13 +4657,30 @@
               "pokedex_number": 328,
               "encounter_rate": 10,
               "level_range": "10-11",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Maniac Tunnel",
                 "encounter_rate": 15
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Vibrava",
+                  "evo_level": 30,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                },
+                {
+                  "evolves_into": "Flygon",
+                  "evo_level": 45,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             }
           ],
           "night": [
@@ -4594,13 +4739,30 @@
               "pokedex_number": 328,
               "encounter_rate": 10,
               "level_range": "10-11",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Maniac Tunnel",
                 "encounter_rate": 15
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Vibrava",
+                  "evo_level": 30,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                },
+                {
+                  "evolves_into": "Flygon",
+                  "evo_level": 45,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             }
           ]
         },
@@ -4689,13 +4851,42 @@
               "pokedex_number": 265,
               "encounter_rate": 10,
               "level_range": "11-12",
-              "catch_count": 0,
+              "catch_count": 5,
               "above_evo_warning": "Already at/above Lv7 for Silcoon; Already at/above Lv7 for Cascoon",
               "better_opportunity": {
                 "area": "Route 205 ~ South",
                 "encounter_rate": 20
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Silcoon",
+                  "evo_level": 7,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                },
+                {
+                  "evolves_into": "Cascoon",
+                  "evo_level": 7,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                },
+                {
+                  "evolves_into": "Beautifly",
+                  "evo_level": 10,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                },
+                {
+                  "evolves_into": "Dustox",
+                  "evo_level": 10,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Ledyba",
@@ -4780,20 +4971,49 @@
               "pokedex_number": 265,
               "encounter_rate": 10,
               "level_range": "11-12",
-              "catch_count": 0,
+              "catch_count": 5,
               "above_evo_warning": "Already at/above Lv7 for Silcoon; Already at/above Lv7 for Cascoon",
               "better_opportunity": {
                 "area": "Route 205 ~ South",
                 "encounter_rate": 20
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Silcoon",
+                  "evo_level": 7,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                },
+                {
+                  "evolves_into": "Cascoon",
+                  "evo_level": 7,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                },
+                {
+                  "evolves_into": "Beautifly",
+                  "evo_level": 10,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                },
+                {
+                  "evolves_into": "Dustox",
+                  "evo_level": 10,
+                  "next_area": "Route 205 ~ South",
+                  "level_range": "12",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Sunkern",
               "pokedex_number": 191,
               "encounter_rate": 10,
               "level_range": "11-12",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Route 229",
@@ -5578,10 +5798,18 @@
             "pokedex_number": 273,
             "encounter_rate": 20,
             "level_range": "12",
-            "catch_count": 0,
+            "catch_count": 3,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Nuzleaf",
+                "evo_level": 14,
+                "next_area": "Route 208",
+                "level_range": "23",
+                "encounter_rate": 20
+              }
+            ]
           },
           {
             "pokemon": "Tangela",
@@ -6107,10 +6335,25 @@
             "pokedex_number": 412,
             "encounter_rate": 20,
             "level_range": "12",
-            "catch_count": 0,
+            "catch_count": 3,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Wormadam",
+                "evo_level": 20,
+                "next_area": "Route 206",
+                "level_range": "21",
+                "encounter_rate": 20
+              },
+              {
+                "evolves_into": "Mothim",
+                "evo_level": 20,
+                "next_area": "Route 206",
+                "level_range": "21",
+                "encounter_rate": 20
+              }
+            ]
           },
           {
             "pokemon": "Pineco",
@@ -6127,10 +6370,43 @@
             "pokedex_number": 265,
             "encounter_rate": 20,
             "level_range": "12",
-            "catch_count": 0,
+            "catch_count": 5,
             "above_evo_warning": "Already at/above Lv7 for Silcoon; Already at/above Lv7 for Cascoon",
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Silcoon",
+                "evo_level": 7,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              },
+              {
+                "evolves_into": "Cascoon",
+                "evo_level": 7,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              },
+              {
+                "evolves_into": "Beautifly",
+                "evo_level": 10,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              },
+              {
+                "evolves_into": "Dustox",
+                "evo_level": 10,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Heracross",
@@ -6563,10 +6839,19 @@
               "pokedex_number": 19,
               "encounter_rate": 30,
               "level_range": "15-18",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Raticate",
+                  "evo_level": 20,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Duskull",
@@ -6617,13 +6902,22 @@
               "pokedex_number": 20,
               "encounter_rate": 5,
               "level_range": "15-18",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Route 225",
                 "encounter_rate": 15
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Raticate",
+                  "evo_level": 20,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Haunter",
@@ -6689,10 +6983,19 @@
               "pokedex_number": 19,
               "encounter_rate": 30,
               "level_range": "15-18",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Raticate",
+                  "evo_level": 20,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Duskull",
@@ -6743,13 +7046,22 @@
               "pokedex_number": 20,
               "encounter_rate": 5,
               "level_range": "15-18",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Route 225",
                 "encounter_rate": 15
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Raticate",
+                  "evo_level": 20,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Haunter",
@@ -6815,10 +7127,19 @@
               "pokedex_number": 19,
               "encounter_rate": 30,
               "level_range": "15-18",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Raticate",
+                  "evo_level": 20,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Duskull",
@@ -6869,13 +7190,22 @@
               "pokedex_number": 20,
               "encounter_rate": 5,
               "level_range": "15-18",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Route 225",
                 "encounter_rate": 15
               },
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Raticate",
+                  "evo_level": 20,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Haunter",
@@ -7335,10 +7665,19 @@
             "pokedex_number": 276,
             "encounter_rate": 20,
             "level_range": "16",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Swellow",
+                "evo_level": 22,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Farfetch'd",
@@ -7383,23 +7722,41 @@
             "pokedex_number": 54,
             "encounter_rate": 90,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Golduck",
             "pokedex_number": 55,
             "encounter_rate": 10,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sendoff Spring",
               "encounter_rate": 100
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -10402,7 +10759,7 @@
             "pokedex_number": 214,
             "encounter_rate": 10,
             "level_range": "21",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 222",
@@ -11416,23 +11773,41 @@
             "pokedex_number": 54,
             "encounter_rate": 90,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Golduck",
             "pokedex_number": 55,
             "encounter_rate": 10,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sendoff Spring",
               "encounter_rate": 100
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -11610,7 +11985,7 @@
             "pokedex_number": 114,
             "encounter_rate": 10,
             "level_range": "23",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Great Marsh ~ Area 1/2",
@@ -12001,7 +12376,7 @@
             "pokedex_number": 114,
             "encounter_rate": 10,
             "level_range": "25",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Great Marsh ~ Area 1/2",
@@ -12634,23 +13009,41 @@
             "pokedex_number": 54,
             "encounter_rate": 90,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Golduck",
             "pokedex_number": 55,
             "encounter_rate": 10,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sendoff Spring",
               "encounter_rate": 100
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -12808,20 +13201,38 @@
               "pokedex_number": 353,
               "encounter_rate": 20,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Banette",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Duskull",
               "pokedex_number": 355,
               "encounter_rate": 20,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Dusclops",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Golbat",
@@ -12868,20 +13279,38 @@
               "pokedex_number": 356,
               "encounter_rate": 5,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Dusclops",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Banette",
               "pokedex_number": 354,
               "encounter_rate": 5,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Banette",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             }
           ],
           "day": [
@@ -12890,20 +13319,38 @@
               "pokedex_number": 353,
               "encounter_rate": 20,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Banette",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Duskull",
               "pokedex_number": 355,
               "encounter_rate": 20,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Dusclops",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Golbat",
@@ -12950,20 +13397,38 @@
               "pokedex_number": 356,
               "encounter_rate": 5,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Dusclops",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Banette",
               "pokedex_number": 354,
               "encounter_rate": 5,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Banette",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             }
           ],
           "night": [
@@ -12972,20 +13437,38 @@
               "pokedex_number": 353,
               "encounter_rate": 20,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Banette",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Duskull",
               "pokedex_number": 355,
               "encounter_rate": 20,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Dusclops",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Golbat",
@@ -13032,20 +13515,38 @@
               "pokedex_number": 356,
               "encounter_rate": 5,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Dusclops",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Banette",
               "pokedex_number": 354,
               "encounter_rate": 5,
               "level_range": "26-30",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Banette",
+                  "evo_level": 32,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             }
           ]
         },
@@ -13447,7 +13948,7 @@
             "pokedex_number": 214,
             "encounter_rate": 10,
             "level_range": "29",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 222",
@@ -13857,10 +14358,19 @@
               "pokedex_number": 322,
               "encounter_rate": 15,
               "level_range": "28-32",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Camerupt",
+                  "evo_level": 33,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Spoink",
@@ -13928,10 +14438,19 @@
               "pokedex_number": 322,
               "encounter_rate": 15,
               "level_range": "28-32",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Camerupt",
+                  "evo_level": 33,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Spoink",
@@ -13999,10 +14518,19 @@
               "pokedex_number": 322,
               "encounter_rate": 15,
               "level_range": "28-32",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Camerupt",
+                  "evo_level": 33,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Spoink",
@@ -14041,23 +14569,41 @@
             "pokedex_number": 54,
             "encounter_rate": 90,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Golduck",
             "pokedex_number": 55,
             "encounter_rate": 10,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sendoff Spring",
               "encounter_rate": 100
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -14242,10 +14788,27 @@
               "pokedex_number": 328,
               "encounter_rate": 15,
               "level_range": "28-32",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Vibrava",
+                  "evo_level": 30,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                },
+                {
+                  "evolves_into": "Flygon",
+                  "evo_level": 45,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Loudred",
@@ -14329,10 +14892,27 @@
               "pokedex_number": 328,
               "encounter_rate": 15,
               "level_range": "28-32",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Vibrava",
+                  "evo_level": 30,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                },
+                {
+                  "evolves_into": "Flygon",
+                  "evo_level": 45,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Loudred",
@@ -14416,10 +14996,27 @@
               "pokedex_number": 328,
               "encounter_rate": 15,
               "level_range": "28-32",
-              "catch_count": 0,
+              "catch_count": 3,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Vibrava",
+                  "evo_level": 30,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                },
+                {
+                  "evolves_into": "Flygon",
+                  "evo_level": 45,
+                  "next_area": null,
+                  "level_range": null,
+                  "encounter_rate": null,
+                  "note": "Must grind — no future area found"
+                }
+              ]
             },
             {
               "pokemon": "Loudred",
@@ -14679,10 +15276,18 @@
               "pokedex_number": 279,
               "encounter_rate": 20,
               "level_range": "32-34",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Pelipper",
+                  "evo_level": 25,
+                  "next_area": "Route 219",
+                  "level_range": "30-45",
+                  "encounter_rate": 60
+                }
+              ]
             },
             {
               "pokemon": "Swellow",
@@ -14741,10 +15346,18 @@
               "pokedex_number": 279,
               "encounter_rate": 20,
               "level_range": "32-34",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Pelipper",
+                  "evo_level": 25,
+                  "next_area": "Route 219",
+                  "level_range": "30-45",
+                  "encounter_rate": 60
+                }
+              ]
             },
             {
               "pokemon": "Swellow",
@@ -14803,10 +15416,18 @@
               "pokedex_number": 279,
               "encounter_rate": 20,
               "level_range": "32-34",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Pelipper",
+                  "evo_level": 25,
+                  "next_area": "Route 219",
+                  "level_range": "30-45",
+                  "encounter_rate": 60
+                }
+              ]
             },
             {
               "pokemon": "Swellow",
@@ -14854,10 +15475,18 @@
             "pokedex_number": 278,
             "encounter_rate": 30,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Pelipper",
+                "evo_level": 25,
+                "next_area": "Route 219",
+                "level_range": "30-45",
+                "encounter_rate": 60
+              }
+            ]
           },
           {
             "pokemon": "Tentacruel",
@@ -14885,13 +15514,21 @@
             "pokedex_number": 279,
             "encounter_rate": 5,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sunyshore City",
               "encounter_rate": 30
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Pelipper",
+                "evo_level": 25,
+                "next_area": "Route 219",
+                "level_range": "30-45",
+                "encounter_rate": 60
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -14910,10 +15547,18 @@
             "pokedex_number": 223,
             "encounter_rate": 30,
             "level_range": "10",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Octillery",
+                "evo_level": 25,
+                "next_area": "Route 212 ~ South",
+                "level_range": "25",
+                "encounter_rate": 10
+              }
+            ]
           },
           {
             "pokemon": "Wailmer",
@@ -14953,10 +15598,18 @@
             "pokedex_number": 223,
             "encounter_rate": 30,
             "level_range": "25",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": "Already at/above Lv25 for Octillery",
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Octillery",
+                "evo_level": 25,
+                "next_area": "Route 212 ~ South",
+                "level_range": "25",
+                "encounter_rate": 10
+              }
+            ]
           },
           {
             "pokemon": "Wailmer",
@@ -14996,10 +15649,18 @@
             "pokedex_number": 224,
             "encounter_rate": 30,
             "level_range": "50",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Octillery",
+                "evo_level": 25,
+                "next_area": "Route 212 ~ South",
+                "level_range": "25",
+                "encounter_rate": 10
+              }
+            ]
           },
           {
             "pokemon": "Wailord",
@@ -15330,7 +15991,7 @@
               "pokedex_number": 114,
               "encounter_rate": 20,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -15382,7 +16043,7 @@
               "pokedex_number": 114,
               "encounter_rate": 20,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -15434,7 +16095,7 @@
               "pokedex_number": 114,
               "encounter_rate": 20,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -15604,20 +16265,36 @@
               "pokedex_number": 453,
               "encounter_rate": 20,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": "Already at/above Lv33 for Toxicroak",
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Toxicroak",
+                  "evo_level": 33,
+                  "next_area": "Route 212 ~ South",
+                  "level_range": "33-36",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Toxicroak",
               "pokedex_number": 454,
               "encounter_rate": 10,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Toxicroak",
+                  "evo_level": 33,
+                  "next_area": "Route 212 ~ South",
+                  "level_range": "33-36",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Kangaskhan",
@@ -15666,20 +16343,36 @@
               "pokedex_number": 453,
               "encounter_rate": 20,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": "Already at/above Lv33 for Toxicroak",
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Toxicroak",
+                  "evo_level": 33,
+                  "next_area": "Route 212 ~ South",
+                  "level_range": "33-36",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Toxicroak",
               "pokedex_number": 454,
               "encounter_rate": 10,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Toxicroak",
+                  "evo_level": 33,
+                  "next_area": "Route 212 ~ South",
+                  "level_range": "33-36",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Kangaskhan",
@@ -15728,20 +16421,36 @@
               "pokedex_number": 453,
               "encounter_rate": 20,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": "Already at/above Lv33 for Toxicroak",
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Toxicroak",
+                  "evo_level": 33,
+                  "next_area": "Route 212 ~ South",
+                  "level_range": "33-36",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Toxicroak",
               "pokedex_number": 454,
               "encounter_rate": 10,
               "level_range": "33-36",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
-              "next_evo_area": null
+              "next_evo_area": [
+                {
+                  "evolves_into": "Toxicroak",
+                  "evo_level": 33,
+                  "next_area": "Route 212 ~ South",
+                  "level_range": "33-36",
+                  "encounter_rate": 20
+                }
+              ]
             },
             {
               "pokemon": "Kangaskhan",
@@ -17201,23 +17910,41 @@
             "pokedex_number": 54,
             "encounter_rate": 90,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Golduck",
             "pokedex_number": 55,
             "encounter_rate": 10,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sendoff Spring",
               "encounter_rate": 100
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -17424,23 +18151,41 @@
             "pokedex_number": 54,
             "encounter_rate": 90,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           },
           {
             "pokemon": "Golduck",
             "pokedex_number": 55,
             "encounter_rate": 10,
             "level_range": "20-40",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Sendoff Spring",
               "encounter_rate": 100
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -18722,7 +19467,7 @@
             "pokedex_number": 214,
             "encounter_rate": 10,
             "level_range": "40",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 222",
@@ -19222,7 +19967,7 @@
             "pokedex_number": 214,
             "encounter_rate": 10,
             "level_range": "39",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 222",
@@ -20145,7 +20890,7 @@
               "pokedex_number": 215,
               "encounter_rate": 10,
               "level_range": "44-48",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Snowpoint Temple",
@@ -20226,7 +20971,7 @@
               "pokedex_number": 215,
               "encounter_rate": 10,
               "level_range": "44-48",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Snowpoint Temple",
@@ -20307,7 +21052,7 @@
               "pokedex_number": 215,
               "encounter_rate": 10,
               "level_range": "44-48",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Snowpoint Temple",
@@ -20413,7 +21158,7 @@
               "pokedex_number": 215,
               "encounter_rate": 10,
               "level_range": "45-49",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Snowpoint Temple",
@@ -20494,7 +21239,7 @@
               "pokedex_number": 215,
               "encounter_rate": 10,
               "level_range": "45-49",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Snowpoint Temple",
@@ -20575,7 +21320,7 @@
               "pokedex_number": 215,
               "encounter_rate": 10,
               "level_range": "45-49",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": {
                 "area": "Snowpoint Temple",
@@ -20681,7 +21426,7 @@
               "pokedex_number": 215,
               "encounter_rate": 20,
               "level_range": "47-50",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -20737,7 +21482,7 @@
               "pokedex_number": 461,
               "encounter_rate": 5,
               "level_range": "47-50",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -20769,7 +21514,7 @@
               "pokedex_number": 215,
               "encounter_rate": 20,
               "level_range": "47-50",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -20825,7 +21570,7 @@
               "pokedex_number": 461,
               "encounter_rate": 5,
               "level_range": "47-50",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -20857,7 +21602,7 @@
               "pokedex_number": 215,
               "encounter_rate": 20,
               "level_range": "47-50",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -20913,7 +21658,7 @@
               "pokedex_number": 461,
               "encounter_rate": 5,
               "level_range": "47-50",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -23793,10 +24538,19 @@
             "pokedex_number": 55,
             "encounter_rate": 100,
             "level_range": "45-55",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Golduck",
+                "evo_level": 33,
+                "next_area": null,
+                "level_range": null,
+                "encounter_rate": null,
+                "note": "Must grind — no future area found"
+              }
+            ]
           }
         ],
         "old_rod": [
@@ -24443,13 +25197,21 @@
             "pokedex_number": 320,
             "encounter_rate": 10,
             "level_range": "10",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 223",
               "encounter_rate": 30
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Wailord",
+                "evo_level": 36,
+                "next_area": "Route 223",
+                "level_range": "50",
+                "encounter_rate": 30
+              }
+            ]
           }
         ],
         "good_rod": [
@@ -24478,13 +25240,21 @@
             "pokedex_number": 320,
             "encounter_rate": 10,
             "level_range": "25",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 223",
               "encounter_rate": 30
             },
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Wailord",
+                "evo_level": 36,
+                "next_area": "Route 223",
+                "level_range": "50",
+                "encounter_rate": 30
+              }
+            ]
           }
         ],
         "super_rod": [
@@ -24503,10 +25273,18 @@
             "pokedex_number": 320,
             "encounter_rate": 30,
             "level_range": "50",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": "Already at/above Lv36 for Wailord",
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Wailord",
+                "evo_level": 36,
+                "next_area": "Route 223",
+                "level_range": "50",
+                "encounter_rate": 30
+              }
+            ]
           },
           {
             "pokemon": "Octillery",
@@ -24523,10 +25301,18 @@
             "pokedex_number": 321,
             "encounter_rate": 5,
             "level_range": "50",
-            "catch_count": 0,
+            "catch_count": 2,
             "above_evo_warning": null,
             "better_opportunity": null,
-            "next_evo_area": null
+            "next_evo_area": [
+              {
+                "evolves_into": "Wailord",
+                "evo_level": 36,
+                "next_area": "Route 223",
+                "level_range": "50",
+                "encounter_rate": 30
+              }
+            ]
           }
         ],
         "honey_tree": [
@@ -24545,7 +25331,7 @@
             "pokedex_number": 214,
             "encounter_rate": 30,
             "level_range": "54",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": null,
             "next_evo_area": null
@@ -24944,7 +25730,7 @@
             "pokedex_number": 222,
             "encounter_rate": 10,
             "level_range": "10",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 230",
@@ -24979,7 +25765,7 @@
             "pokedex_number": 222,
             "encounter_rate": 10,
             "level_range": "25",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 230",
@@ -25014,7 +25800,7 @@
             "pokedex_number": 222,
             "encounter_rate": 10,
             "level_range": "50",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 230",
@@ -27189,7 +27975,7 @@
             "pokedex_number": 222,
             "encounter_rate": 10,
             "level_range": "10",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 230",
@@ -27224,7 +28010,7 @@
             "pokedex_number": 222,
             "encounter_rate": 10,
             "level_range": "25",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 230",
@@ -27259,7 +28045,7 @@
             "pokedex_number": 222,
             "encounter_rate": 10,
             "level_range": "50",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": {
               "area": "Route 230",
@@ -28221,7 +29007,7 @@
               "pokedex_number": 227,
               "encounter_rate": 15,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 1,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28231,7 +29017,7 @@
               "pokedex_number": 207,
               "encounter_rate": 15,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28293,7 +29079,7 @@
               "pokedex_number": 227,
               "encounter_rate": 15,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 1,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28303,7 +29089,7 @@
               "pokedex_number": 207,
               "encounter_rate": 15,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28365,7 +29151,7 @@
               "pokedex_number": 227,
               "encounter_rate": 15,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 1,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28375,7 +29161,7 @@
               "pokedex_number": 207,
               "encounter_rate": 15,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28849,7 +29635,7 @@
               "pokedex_number": 127,
               "encounter_rate": 20,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 1,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28931,7 +29717,7 @@
               "pokedex_number": 127,
               "encounter_rate": 20,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 1,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -28941,7 +29727,7 @@
               "pokedex_number": 191,
               "encounter_rate": 20,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 2,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -29013,7 +29799,7 @@
               "pokedex_number": 127,
               "encounter_rate": 20,
               "level_range": "65-67",
-              "catch_count": 0,
+              "catch_count": 1,
               "above_evo_warning": null,
               "better_opportunity": null,
               "next_evo_area": null
@@ -29513,7 +30299,7 @@
             "pokedex_number": 222,
             "encounter_rate": 30,
             "level_range": "10",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": null,
             "next_evo_area": null
@@ -29545,7 +30331,7 @@
             "pokedex_number": 222,
             "encounter_rate": 30,
             "level_range": "25",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": null,
             "next_evo_area": null
@@ -29577,7 +30363,7 @@
             "pokedex_number": 222,
             "encounter_rate": 30,
             "level_range": "50",
-            "catch_count": 0,
+            "catch_count": 1,
             "above_evo_warning": null,
             "better_opportunity": null,
             "next_evo_area": null

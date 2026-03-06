@@ -336,6 +336,13 @@ function getEvoInfo(pokemonName, targetEvo) {
     return null;
 }
 
+// Format item name with proper spacing (e.g., "FireStone" -> "Fire Stone")
+function formatItemName(item) {
+    if (!item) return '';
+    // Add space before capital letters (but not at start)
+    return item.replace(/([a-z])([A-Z])/g, '$1 $2');
+}
+
 // Render evolution modal
 function renderEvoModal(pokemon) {
     const title = document.getElementById('evo-modal-title');
@@ -382,11 +389,13 @@ function renderEvoModal(pokemon) {
             if (evoTo.method === 'level' && evoTo.level) {
                 evoInfo = `Lv. ${evoTo.level}`;
             } else if (evoTo.method === 'item' && evoTo.item) {
-                evoInfo = evoTo.item;
+                evoInfo = formatItemName(evoTo.item);
             } else if (evoTo.method === 'happiness') {
                 evoInfo = 'Happiness';
+            } else if (evoTo.method === 'trade') {
+                evoInfo = evoTo.item ? `Trade (${formatItemName(evoTo.item)})` : 'Trade';
             } else {
-                evoInfo = evoTo.method || '';
+                evoInfo = evoTo.method ? evoTo.method.charAt(0).toUpperCase() + evoTo.method.slice(1) : '';
             }
         }
         
