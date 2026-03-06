@@ -1,0 +1,4165 @@
+{
+  "description": "Pokemon evolution data for Renegade Platinum living dex",
+  "pokemon": [
+    {
+      "pokemon": "Bulbasaur",
+      "pokedex_number": 1,
+      "evolves_to": [
+        {
+          "pokemon": "Ivysaur",
+          "pokedex_number": 2,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Ivysaur",
+      "pokedex_number": 2,
+      "evolves_to": [
+        {
+          "pokemon": "Venusaur",
+          "pokedex_number": 3,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Venusaur",
+      "pokedex_number": 3,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Charmander",
+      "pokedex_number": 4,
+      "evolves_to": [
+        {
+          "pokemon": "Charmeleon",
+          "pokedex_number": 5,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Charmeleon",
+      "pokedex_number": 5,
+      "evolves_to": [
+        {
+          "pokemon": "Charizard",
+          "pokedex_number": 6,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Charizard",
+      "pokedex_number": 6,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Squirtle",
+      "pokedex_number": 7,
+      "evolves_to": [
+        {
+          "pokemon": "Wartortle",
+          "pokedex_number": 8,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Wartortle",
+      "pokedex_number": 8,
+      "evolves_to": [
+        {
+          "pokemon": "Blastoise",
+          "pokedex_number": 9,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Blastoise",
+      "pokedex_number": 9,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Caterpie",
+      "pokedex_number": 10,
+      "evolves_to": [
+        {
+          "pokemon": "Metapod",
+          "pokedex_number": 11,
+          "method": "level",
+          "level": 7
+        }
+      ]
+    },
+    {
+      "pokemon": "Metapod",
+      "pokedex_number": 11,
+      "evolves_to": [
+        {
+          "pokemon": "Butterfree",
+          "pokedex_number": 12,
+          "method": "level",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "pokemon": "Butterfree",
+      "pokedex_number": 12,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Weedle",
+      "pokedex_number": 13,
+      "evolves_to": [
+        {
+          "pokemon": "Kakuna",
+          "pokedex_number": 14,
+          "method": "level",
+          "level": 7
+        }
+      ]
+    },
+    {
+      "pokemon": "Kakuna",
+      "pokedex_number": 14,
+      "evolves_to": [
+        {
+          "pokemon": "Beedrill",
+          "pokedex_number": 15,
+          "method": "level",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "pokemon": "Beedrill",
+      "pokedex_number": 15,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Pidgey",
+      "pokedex_number": 16,
+      "evolves_to": [
+        {
+          "pokemon": "Pidgeotto",
+          "pokedex_number": 17,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Pidgeotto",
+      "pokedex_number": 17,
+      "evolves_to": [
+        {
+          "pokemon": "Pidgeot",
+          "pokedex_number": 18,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Pidgeot",
+      "pokedex_number": 18,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Rattata",
+      "pokedex_number": 19,
+      "evolves_to": [
+        {
+          "pokemon": "Raticate",
+          "pokedex_number": 20,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Raticate",
+      "pokedex_number": 20,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Spearow",
+      "pokedex_number": 21,
+      "evolves_to": [
+        {
+          "pokemon": "Fearow",
+          "pokedex_number": 22,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Fearow",
+      "pokedex_number": 22,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Ekans",
+      "pokedex_number": 23,
+      "evolves_to": [
+        {
+          "pokemon": "Arbok",
+          "pokedex_number": 24,
+          "method": "level",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "pokemon": "Arbok",
+      "pokedex_number": 24,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Pikachu",
+      "pokedex_number": 25,
+      "evolves_to": [
+        {
+          "pokemon": "Raichu",
+          "pokedex_number": 26,
+          "method": "item",
+          "item": "ThunderStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Raichu",
+      "pokedex_number": 26,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Sandshrew",
+      "pokedex_number": 27,
+      "evolves_to": [
+        {
+          "pokemon": "Sandslash",
+          "pokedex_number": 28,
+          "method": "level",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "pokemon": "Sandslash",
+      "pokedex_number": 28,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Nidoran♀",
+      "pokedex_number": 29,
+      "evolves_to": [
+        {
+          "pokemon": "Nidorina",
+          "pokedex_number": 30,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Nidorina",
+      "pokedex_number": 30,
+      "evolves_to": [
+        {
+          "pokemon": "Nidoqueen",
+          "pokedex_number": 31,
+          "method": "item",
+          "item": "MoonStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Nidoqueen",
+      "pokedex_number": 31,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Nidoran♂",
+      "pokedex_number": 32,
+      "evolves_to": [
+        {
+          "pokemon": "Nidorino",
+          "pokedex_number": 33,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Nidorino",
+      "pokedex_number": 33,
+      "evolves_to": [
+        {
+          "pokemon": "Nidoking",
+          "pokedex_number": 34,
+          "method": "item",
+          "item": "MoonStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Nidoking",
+      "pokedex_number": 34,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Clefairy",
+      "pokedex_number": 35,
+      "evolves_to": [
+        {
+          "pokemon": "Clefable",
+          "pokedex_number": 36,
+          "method": "item",
+          "item": "MoonStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Clefable",
+      "pokedex_number": 36,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Vulpix",
+      "pokedex_number": 37,
+      "evolves_to": [
+        {
+          "pokemon": "Ninetales",
+          "pokedex_number": 38,
+          "method": "item",
+          "item": "FireStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Ninetales",
+      "pokedex_number": 38,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Jigglypuff",
+      "pokedex_number": 39,
+      "evolves_to": [
+        {
+          "pokemon": "Wigglytuff",
+          "pokedex_number": 40,
+          "method": "item",
+          "item": "MoonStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Wigglytuff",
+      "pokedex_number": 40,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Zubat",
+      "pokedex_number": 41,
+      "evolves_to": [
+        {
+          "pokemon": "Golbat",
+          "pokedex_number": 42,
+          "method": "level",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "pokemon": "Golbat",
+      "pokedex_number": 42,
+      "evolves_to": [
+        {
+          "pokemon": "Crobat",
+          "pokedex_number": 169,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Oddish",
+      "pokedex_number": 43,
+      "evolves_to": [
+        {
+          "pokemon": "Gloom",
+          "pokedex_number": 44,
+          "method": "level",
+          "level": 21
+        }
+      ]
+    },
+    {
+      "pokemon": "Gloom",
+      "pokedex_number": 44,
+      "evolves_to": [
+        {
+          "pokemon": "Vileplume",
+          "pokedex_number": 45,
+          "method": "item",
+          "item": "LeafStone"
+        },
+        {
+          "pokemon": "Bellossom",
+          "pokedex_number": 182,
+          "method": "item",
+          "item": "SunStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Vileplume",
+      "pokedex_number": 45,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Paras",
+      "pokedex_number": 46,
+      "evolves_to": [
+        {
+          "pokemon": "Parasect",
+          "pokedex_number": 47,
+          "method": "level",
+          "level": 24
+        }
+      ]
+    },
+    {
+      "pokemon": "Parasect",
+      "pokedex_number": 47,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Venonat",
+      "pokedex_number": 48,
+      "evolves_to": [
+        {
+          "pokemon": "Venomoth",
+          "pokedex_number": 49,
+          "method": "level",
+          "level": 31
+        }
+      ]
+    },
+    {
+      "pokemon": "Venomoth",
+      "pokedex_number": 49,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Diglett",
+      "pokedex_number": 50,
+      "evolves_to": [
+        {
+          "pokemon": "Dugtrio",
+          "pokedex_number": 51,
+          "method": "level",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "pokemon": "Dugtrio",
+      "pokedex_number": 51,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Meowth",
+      "pokedex_number": 52,
+      "evolves_to": [
+        {
+          "pokemon": "Persian",
+          "pokedex_number": 53,
+          "method": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "pokemon": "Persian",
+      "pokedex_number": 53,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Psyduck",
+      "pokedex_number": 54,
+      "evolves_to": [
+        {
+          "pokemon": "Golduck",
+          "pokedex_number": 55,
+          "method": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "pokemon": "Golduck",
+      "pokedex_number": 55,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mankey",
+      "pokedex_number": 56,
+      "evolves_to": [
+        {
+          "pokemon": "Primeape",
+          "pokedex_number": 57,
+          "method": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "pokemon": "Primeape",
+      "pokedex_number": 57,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Growlithe",
+      "pokedex_number": 58,
+      "evolves_to": [
+        {
+          "pokemon": "Arcanine",
+          "pokedex_number": 59,
+          "method": "item",
+          "item": "FireStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Arcanine",
+      "pokedex_number": 59,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Poliwag",
+      "pokedex_number": 60,
+      "evolves_to": [
+        {
+          "pokemon": "Poliwhirl",
+          "pokedex_number": 61,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Poliwhirl",
+      "pokedex_number": 61,
+      "evolves_to": [
+        {
+          "pokemon": "Poliwrath",
+          "pokedex_number": 62,
+          "method": "item",
+          "item": "WaterStone"
+        },
+        {
+          "pokemon": "Politoed",
+          "pokedex_number": 186,
+          "method": "item",
+          "item": "King's Rock"
+        }
+      ]
+    },
+    {
+      "pokemon": "Poliwrath",
+      "pokedex_number": 62,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Abra",
+      "pokedex_number": 63,
+      "evolves_to": [
+        {
+          "pokemon": "Kadabra",
+          "pokedex_number": 64,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Kadabra",
+      "pokedex_number": 64,
+      "evolves_to": [
+        {
+          "pokemon": "Alakazam",
+          "pokedex_number": 65,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Alakazam",
+      "pokedex_number": 65,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Machop",
+      "pokedex_number": 66,
+      "evolves_to": [
+        {
+          "pokemon": "Machoke",
+          "pokedex_number": 67,
+          "method": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "pokemon": "Machoke",
+      "pokedex_number": 67,
+      "evolves_to": [
+        {
+          "pokemon": "Machamp",
+          "pokedex_number": 68,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Machamp",
+      "pokedex_number": 68,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Bellsprout",
+      "pokedex_number": 69,
+      "evolves_to": [
+        {
+          "pokemon": "Weepinbell",
+          "pokedex_number": 70,
+          "method": "level",
+          "level": 21
+        }
+      ]
+    },
+    {
+      "pokemon": "Weepinbell",
+      "pokedex_number": 70,
+      "evolves_to": [
+        {
+          "pokemon": "Victreebel",
+          "pokedex_number": 71,
+          "method": "item",
+          "item": "LeafStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Victreebel",
+      "pokedex_number": 71,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Tentacool",
+      "pokedex_number": 72,
+      "evolves_to": [
+        {
+          "pokemon": "Tentacruel",
+          "pokedex_number": 73,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Tentacruel",
+      "pokedex_number": 73,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Geodude",
+      "pokedex_number": 74,
+      "evolves_to": [
+        {
+          "pokemon": "Graveler",
+          "pokedex_number": 75,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Graveler",
+      "pokedex_number": 75,
+      "evolves_to": [
+        {
+          "pokemon": "Golem",
+          "pokedex_number": 76,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Golem",
+      "pokedex_number": 76,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Ponyta",
+      "pokedex_number": 77,
+      "evolves_to": [
+        {
+          "pokemon": "Rapidash",
+          "pokedex_number": 78,
+          "method": "level",
+          "level": 35
+        }
+      ]
+    },
+    {
+      "pokemon": "Rapidash",
+      "pokedex_number": 78,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Slowpoke",
+      "pokedex_number": 79,
+      "evolves_to": [
+        {
+          "pokemon": "Slowbro",
+          "pokedex_number": 80,
+          "method": "level",
+          "level": 33
+        },
+        {
+          "pokemon": "Slowking",
+          "pokedex_number": 199,
+          "method": "item",
+          "item": "King's Rock"
+        }
+      ]
+    },
+    {
+      "pokemon": "Slowbro",
+      "pokedex_number": 80,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Magnemite",
+      "pokedex_number": 81,
+      "evolves_to": [
+        {
+          "pokemon": "Magneton",
+          "pokedex_number": 82,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Magneton",
+      "pokedex_number": 82,
+      "evolves_to": [
+        {
+          "pokemon": "Magnezone",
+          "pokedex_number": 462,
+          "method": "location"
+        }
+      ]
+    },
+    {
+      "pokemon": "Farfetchd",
+      "pokedex_number": 83,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Doduo",
+      "pokedex_number": 84,
+      "evolves_to": [
+        {
+          "pokemon": "Dodrio",
+          "pokedex_number": 85,
+          "method": "level",
+          "level": 31
+        }
+      ]
+    },
+    {
+      "pokemon": "Dodrio",
+      "pokedex_number": 85,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Seel",
+      "pokedex_number": 86,
+      "evolves_to": [
+        {
+          "pokemon": "Dewgong",
+          "pokedex_number": 87,
+          "method": "level",
+          "level": 34
+        }
+      ]
+    },
+    {
+      "pokemon": "Dewgong",
+      "pokedex_number": 87,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Grimer",
+      "pokedex_number": 88,
+      "evolves_to": [
+        {
+          "pokemon": "Muk",
+          "pokedex_number": 89,
+          "method": "level",
+          "level": 35
+        }
+      ]
+    },
+    {
+      "pokemon": "Muk",
+      "pokedex_number": 89,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shellder",
+      "pokedex_number": 90,
+      "evolves_to": [
+        {
+          "pokemon": "Cloyster",
+          "pokedex_number": 91,
+          "method": "item",
+          "item": "WaterStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Cloyster",
+      "pokedex_number": 91,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Gastly",
+      "pokedex_number": 92,
+      "evolves_to": [
+        {
+          "pokemon": "Haunter",
+          "pokedex_number": 93,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Haunter",
+      "pokedex_number": 93,
+      "evolves_to": [
+        {
+          "pokemon": "Gengar",
+          "pokedex_number": 94,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Gengar",
+      "pokedex_number": 94,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Onix",
+      "pokedex_number": 95,
+      "evolves_to": [
+        {
+          "pokemon": "Steelix",
+          "pokedex_number": 208,
+          "method": "item",
+          "item": "Metal Coat"
+        }
+      ]
+    },
+    {
+      "pokemon": "Drowzee",
+      "pokedex_number": 96,
+      "evolves_to": [
+        {
+          "pokemon": "Hypno",
+          "pokedex_number": 97,
+          "method": "level",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "pokemon": "Hypno",
+      "pokedex_number": 97,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Krabby",
+      "pokedex_number": 98,
+      "evolves_to": [
+        {
+          "pokemon": "Kingler",
+          "pokedex_number": 99,
+          "method": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "pokemon": "Kingler",
+      "pokedex_number": 99,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Voltorb",
+      "pokedex_number": 100,
+      "evolves_to": [
+        {
+          "pokemon": "Electrode",
+          "pokedex_number": 101,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Electrode",
+      "pokedex_number": 101,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Exeggcute",
+      "pokedex_number": 102,
+      "evolves_to": [
+        {
+          "pokemon": "Exeggutor",
+          "pokedex_number": 103,
+          "method": "item",
+          "item": "LeafStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Exeggutor",
+      "pokedex_number": 103,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Cubone",
+      "pokedex_number": 104,
+      "evolves_to": [
+        {
+          "pokemon": "Marowak",
+          "pokedex_number": 105,
+          "method": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "pokemon": "Marowak",
+      "pokedex_number": 105,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Hitmonlee",
+      "pokedex_number": 106,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Hitmonchan",
+      "pokedex_number": 107,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Lickitung",
+      "pokedex_number": 108,
+      "evolves_to": [
+        {
+          "pokemon": "Lickilicky",
+          "pokedex_number": 463,
+          "method": "move",
+          "move": "rollout"
+        }
+      ]
+    },
+    {
+      "pokemon": "Koffing",
+      "pokedex_number": 109,
+      "evolves_to": [
+        {
+          "pokemon": "Weezing",
+          "pokedex_number": 110,
+          "method": "level",
+          "level": 35
+        }
+      ]
+    },
+    {
+      "pokemon": "Weezing",
+      "pokedex_number": 110,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Rhyhorn",
+      "pokedex_number": 111,
+      "evolves_to": [
+        {
+          "pokemon": "Rhydon",
+          "pokedex_number": 112,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Rhydon",
+      "pokedex_number": 112,
+      "evolves_to": [
+        {
+          "pokemon": "Rhyperior",
+          "pokedex_number": 464,
+          "method": "item",
+          "item": "Protector"
+        }
+      ]
+    },
+    {
+      "pokemon": "Chansey",
+      "pokedex_number": 113,
+      "evolves_to": [
+        {
+          "pokemon": "Blissey",
+          "pokedex_number": 242,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Tangela",
+      "pokedex_number": 114,
+      "evolves_to": [
+        {
+          "pokemon": "Tangrowth",
+          "pokedex_number": 465,
+          "method": "move",
+          "move": "ancient-power"
+        }
+      ]
+    },
+    {
+      "pokemon": "Kangaskhan",
+      "pokedex_number": 115,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Horsea",
+      "pokedex_number": 116,
+      "evolves_to": [
+        {
+          "pokemon": "Seadra",
+          "pokedex_number": 117,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Seadra",
+      "pokedex_number": 117,
+      "evolves_to": [
+        {
+          "pokemon": "Kingdra",
+          "pokedex_number": 230,
+          "method": "item",
+          "item": "Dragon Scale"
+        }
+      ]
+    },
+    {
+      "pokemon": "Goldeen",
+      "pokedex_number": 118,
+      "evolves_to": [
+        {
+          "pokemon": "Seaking",
+          "pokedex_number": 119,
+          "method": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "pokemon": "Seaking",
+      "pokedex_number": 119,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Staryu",
+      "pokedex_number": 120,
+      "evolves_to": [
+        {
+          "pokemon": "Starmie",
+          "pokedex_number": 121,
+          "method": "item",
+          "item": "WaterStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Starmie",
+      "pokedex_number": 121,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mr. Mime",
+      "pokedex_number": 122,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Scyther",
+      "pokedex_number": 123,
+      "evolves_to": [
+        {
+          "pokemon": "Scizor",
+          "pokedex_number": 212,
+          "method": "item",
+          "item": "Metal Coat"
+        }
+      ]
+    },
+    {
+      "pokemon": "Jynx",
+      "pokedex_number": 124,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Electabuzz",
+      "pokedex_number": 125,
+      "evolves_to": [
+        {
+          "pokemon": "Electivire",
+          "pokedex_number": 466,
+          "method": "item",
+          "item": "Electirizer"
+        }
+      ]
+    },
+    {
+      "pokemon": "Magmar",
+      "pokedex_number": 126,
+      "evolves_to": [
+        {
+          "pokemon": "Magmortar",
+          "pokedex_number": 467,
+          "method": "item",
+          "item": "Magmarizer"
+        }
+      ]
+    },
+    {
+      "pokemon": "Pinsir",
+      "pokedex_number": 127,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Tauros",
+      "pokedex_number": 128,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Magikarp",
+      "pokedex_number": 129,
+      "evolves_to": [
+        {
+          "pokemon": "Gyarados",
+          "pokedex_number": 130,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Gyarados",
+      "pokedex_number": 130,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Lapras",
+      "pokedex_number": 131,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Ditto",
+      "pokedex_number": 132,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Eevee",
+      "pokedex_number": 133,
+      "evolves_to": [
+        {
+          "pokemon": "Vaporeon",
+          "pokedex_number": 134,
+          "method": "item",
+          "item": "Water Stone"
+        },
+        {
+          "pokemon": "Jolteon",
+          "pokedex_number": 135,
+          "method": "item",
+          "item": "Thunder Stone"
+        },
+        {
+          "pokemon": "Flareon",
+          "pokedex_number": 136,
+          "method": "item",
+          "item": "Fire Stone"
+        },
+        {
+          "pokemon": "Espeon",
+          "pokedex_number": 196,
+          "method": "item",
+          "item": "Sun Stone"
+        },
+        {
+          "pokemon": "Umbreon",
+          "pokedex_number": 197,
+          "method": "item",
+          "item": "Moon Stone"
+        },
+        {
+          "pokemon": "Leafeon",
+          "pokedex_number": 470,
+          "method": "item",
+          "item": "Leaf Stone"
+        },
+        {
+          "pokemon": "Glaceon",
+          "pokedex_number": 471,
+          "method": "item",
+          "item": "Ice Stone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Vaporeon",
+      "pokedex_number": 134,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Jolteon",
+      "pokedex_number": 135,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Flareon",
+      "pokedex_number": 136,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Porygon",
+      "pokedex_number": 137,
+      "evolves_to": [
+        {
+          "pokemon": "Porygon2",
+          "pokedex_number": 233,
+          "method": "item",
+          "item": "Up-Grade"
+        }
+      ]
+    },
+    {
+      "pokemon": "Omanyte",
+      "pokedex_number": 138,
+      "evolves_to": [
+        {
+          "pokemon": "Omastar",
+          "pokedex_number": 139,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Omastar",
+      "pokedex_number": 139,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Kabuto",
+      "pokedex_number": 140,
+      "evolves_to": [
+        {
+          "pokemon": "Kabutops",
+          "pokedex_number": 141,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Kabutops",
+      "pokedex_number": 141,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Aerodactyl",
+      "pokedex_number": 142,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Snorlax",
+      "pokedex_number": 143,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Articuno",
+      "pokedex_number": 144,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Zapdos",
+      "pokedex_number": 145,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Moltres",
+      "pokedex_number": 146,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Dratini",
+      "pokedex_number": 147,
+      "evolves_to": [
+        {
+          "pokemon": "Dragonair",
+          "pokedex_number": 148,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Dragonair",
+      "pokedex_number": 148,
+      "evolves_to": [
+        {
+          "pokemon": "Dragonite",
+          "pokedex_number": 149,
+          "method": "level",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "pokemon": "Dragonite",
+      "pokedex_number": 149,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mewtwo",
+      "pokedex_number": 150,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mew",
+      "pokedex_number": 151,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Chikorita",
+      "pokedex_number": 152,
+      "evolves_to": [
+        {
+          "pokemon": "Bayleef",
+          "pokedex_number": 153,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Bayleef",
+      "pokedex_number": 153,
+      "evolves_to": [
+        {
+          "pokemon": "Meganium",
+          "pokedex_number": 154,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Meganium",
+      "pokedex_number": 154,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Cyndaquil",
+      "pokedex_number": 155,
+      "evolves_to": [
+        {
+          "pokemon": "Quilava",
+          "pokedex_number": 156,
+          "method": "level",
+          "level": 14
+        }
+      ]
+    },
+    {
+      "pokemon": "Quilava",
+      "pokedex_number": 156,
+      "evolves_to": [
+        {
+          "pokemon": "Typhlosion",
+          "pokedex_number": 157,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Typhlosion",
+      "pokedex_number": 157,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Totodile",
+      "pokedex_number": 158,
+      "evolves_to": [
+        {
+          "pokemon": "Croconaw",
+          "pokedex_number": 159,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Croconaw",
+      "pokedex_number": 159,
+      "evolves_to": [
+        {
+          "pokemon": "Feraligatr",
+          "pokedex_number": 160,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Feraligatr",
+      "pokedex_number": 160,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Sentret",
+      "pokedex_number": 161,
+      "evolves_to": [
+        {
+          "pokemon": "Furret",
+          "pokedex_number": 162,
+          "method": "level",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "pokemon": "Furret",
+      "pokedex_number": 162,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Hoothoot",
+      "pokedex_number": 163,
+      "evolves_to": [
+        {
+          "pokemon": "Noctowl",
+          "pokedex_number": 164,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Noctowl",
+      "pokedex_number": 164,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Ledyba",
+      "pokedex_number": 165,
+      "evolves_to": [
+        {
+          "pokemon": "Ledian",
+          "pokedex_number": 166,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Ledian",
+      "pokedex_number": 166,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Spinarak",
+      "pokedex_number": 167,
+      "evolves_to": [
+        {
+          "pokemon": "Ariados",
+          "pokedex_number": 168,
+          "method": "level",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "pokemon": "Ariados",
+      "pokedex_number": 168,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Crobat",
+      "pokedex_number": 169,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Chinchou",
+      "pokedex_number": 170,
+      "evolves_to": [
+        {
+          "pokemon": "Lanturn",
+          "pokedex_number": 171,
+          "method": "level",
+          "level": 27
+        }
+      ]
+    },
+    {
+      "pokemon": "Lanturn",
+      "pokedex_number": 171,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Pichu",
+      "pokedex_number": 172,
+      "evolves_to": [
+        {
+          "pokemon": "Pikachu",
+          "pokedex_number": 25,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Cleffa",
+      "pokedex_number": 173,
+      "evolves_to": [
+        {
+          "pokemon": "Clefairy",
+          "pokedex_number": 35,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Igglybuff",
+      "pokedex_number": 174,
+      "evolves_to": [
+        {
+          "pokemon": "Jigglypuff",
+          "pokedex_number": 39,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Togepi",
+      "pokedex_number": 175,
+      "evolves_to": [
+        {
+          "pokemon": "Togetic",
+          "pokedex_number": 176,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Togetic",
+      "pokedex_number": 176,
+      "evolves_to": [
+        {
+          "pokemon": "Togekiss",
+          "pokedex_number": 468,
+          "method": "item",
+          "item": "ShinyStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Natu",
+      "pokedex_number": 177,
+      "evolves_to": [
+        {
+          "pokemon": "Xatu",
+          "pokedex_number": 178,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Xatu",
+      "pokedex_number": 178,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mareep",
+      "pokedex_number": 179,
+      "evolves_to": [
+        {
+          "pokemon": "Flaaffy",
+          "pokedex_number": 180,
+          "method": "level",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "pokemon": "Flaaffy",
+      "pokedex_number": 180,
+      "evolves_to": [
+        {
+          "pokemon": "Ampharos",
+          "pokedex_number": 181,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Ampharos",
+      "pokedex_number": 181,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Bellossom",
+      "pokedex_number": 182,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Marill",
+      "pokedex_number": 183,
+      "evolves_to": [
+        {
+          "pokemon": "Azumarill",
+          "pokedex_number": 184,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Azumarill",
+      "pokedex_number": 184,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Sudowoodo",
+      "pokedex_number": 185,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Politoed",
+      "pokedex_number": 186,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Hoppip",
+      "pokedex_number": 187,
+      "evolves_to": [
+        {
+          "pokemon": "Skiploom",
+          "pokedex_number": 188,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Skiploom",
+      "pokedex_number": 188,
+      "evolves_to": [
+        {
+          "pokemon": "Jumpluff",
+          "pokedex_number": 189,
+          "method": "level",
+          "level": 27
+        }
+      ]
+    },
+    {
+      "pokemon": "Jumpluff",
+      "pokedex_number": 189,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Aipom",
+      "pokedex_number": 190,
+      "evolves_to": [
+        {
+          "pokemon": "Ambipom",
+          "pokedex_number": 424,
+          "method": "move",
+          "move": "double-hit"
+        }
+      ]
+    },
+    {
+      "pokemon": "Sunkern",
+      "pokedex_number": 191,
+      "evolves_to": [
+        {
+          "pokemon": "Sunflora",
+          "pokedex_number": 192,
+          "method": "item",
+          "item": "SunStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Sunflora",
+      "pokedex_number": 192,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Yanma",
+      "pokedex_number": 193,
+      "evolves_to": [
+        {
+          "pokemon": "Yanmega",
+          "pokedex_number": 469,
+          "method": "move",
+          "move": "ancient-power"
+        }
+      ]
+    },
+    {
+      "pokemon": "Wooper",
+      "pokedex_number": 194,
+      "evolves_to": [
+        {
+          "pokemon": "Quagsire",
+          "pokedex_number": 195,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Quagsire",
+      "pokedex_number": 195,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Espeon",
+      "pokedex_number": 196,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Umbreon",
+      "pokedex_number": 197,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Murkrow",
+      "pokedex_number": 198,
+      "evolves_to": [
+        {
+          "pokemon": "Honchkrow",
+          "pokedex_number": 430,
+          "method": "item",
+          "item": "DuskStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Slowking",
+      "pokedex_number": 199,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Misdreavus",
+      "pokedex_number": 200,
+      "evolves_to": [
+        {
+          "pokemon": "Mismagius",
+          "pokedex_number": 429,
+          "method": "item",
+          "item": "DuskStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Unown",
+      "pokedex_number": 201,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Wobbuffet",
+      "pokedex_number": 202,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Girafarig",
+      "pokedex_number": 203,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Pineco",
+      "pokedex_number": 204,
+      "evolves_to": [
+        {
+          "pokemon": "Forretress",
+          "pokedex_number": 205,
+          "method": "level",
+          "level": 31
+        }
+      ]
+    },
+    {
+      "pokemon": "Forretress",
+      "pokedex_number": 205,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Dunsparce",
+      "pokedex_number": 206,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Gligar",
+      "pokedex_number": 207,
+      "evolves_to": [
+        {
+          "pokemon": "Gliscor",
+          "pokedex_number": 472,
+          "method": "happiness",
+          "time": "night"
+        }
+      ]
+    },
+    {
+      "pokemon": "Steelix",
+      "pokedex_number": 208,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Snubbull",
+      "pokedex_number": 209,
+      "evolves_to": [
+        {
+          "pokemon": "Granbull",
+          "pokedex_number": 210,
+          "method": "level",
+          "level": 23
+        }
+      ]
+    },
+    {
+      "pokemon": "Granbull",
+      "pokedex_number": 210,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Qwilfish",
+      "pokedex_number": 211,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Scizor",
+      "pokedex_number": 212,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shuckle",
+      "pokedex_number": 213,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Heracross",
+      "pokedex_number": 214,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Sneasel",
+      "pokedex_number": 215,
+      "evolves_to": [
+        {
+          "pokemon": "Weavile",
+          "pokedex_number": 461,
+          "method": "happiness",
+          "time": "night"
+        }
+      ]
+    },
+    {
+      "pokemon": "Teddiursa",
+      "pokedex_number": 216,
+      "evolves_to": [
+        {
+          "pokemon": "Ursaring",
+          "pokedex_number": 217,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Ursaring",
+      "pokedex_number": 217,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Slugma",
+      "pokedex_number": 218,
+      "evolves_to": [
+        {
+          "pokemon": "Magcargo",
+          "pokedex_number": 219,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Magcargo",
+      "pokedex_number": 219,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Swinub",
+      "pokedex_number": 220,
+      "evolves_to": [
+        {
+          "pokemon": "Piloswine",
+          "pokedex_number": 221,
+          "method": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "pokemon": "Piloswine",
+      "pokedex_number": 221,
+      "evolves_to": [
+        {
+          "pokemon": "Mamoswine",
+          "pokedex_number": 473,
+          "method": "move",
+          "move": "ancient-power"
+        }
+      ]
+    },
+    {
+      "pokemon": "Corsola",
+      "pokedex_number": 222,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Remoraid",
+      "pokedex_number": 223,
+      "evolves_to": [
+        {
+          "pokemon": "Octillery",
+          "pokedex_number": 224,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Octillery",
+      "pokedex_number": 224,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Delibird",
+      "pokedex_number": 225,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mantine",
+      "pokedex_number": 226,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Skarmory",
+      "pokedex_number": 227,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Houndour",
+      "pokedex_number": 228,
+      "evolves_to": [
+        {
+          "pokemon": "Houndoom",
+          "pokedex_number": 229,
+          "method": "level",
+          "level": 24
+        }
+      ]
+    },
+    {
+      "pokemon": "Houndoom",
+      "pokedex_number": 229,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Kingdra",
+      "pokedex_number": 230,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Phanpy",
+      "pokedex_number": 231,
+      "evolves_to": [
+        {
+          "pokemon": "Donphan",
+          "pokedex_number": 232,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Donphan",
+      "pokedex_number": 232,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Porygon2",
+      "pokedex_number": 233,
+      "evolves_to": [
+        {
+          "pokemon": "Porygon-Z",
+          "pokedex_number": 474,
+          "method": "item",
+          "item": "Dubious Disc"
+        }
+      ]
+    },
+    {
+      "pokemon": "Stantler",
+      "pokedex_number": 234,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Smeargle",
+      "pokedex_number": 235,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Tyrogue",
+      "pokedex_number": 236,
+      "evolves_to": [
+        {
+          "pokemon": "Hitmonlee",
+          "pokedex_number": 106,
+          "method": "level",
+          "level": 20
+        },
+        {
+          "pokemon": "Hitmonchan",
+          "pokedex_number": 107,
+          "method": "level",
+          "level": 20
+        },
+        {
+          "pokemon": "Hitmontop",
+          "pokedex_number": 237,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Hitmontop",
+      "pokedex_number": 237,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Smoochum",
+      "pokedex_number": 238,
+      "evolves_to": [
+        {
+          "pokemon": "Jynx",
+          "pokedex_number": 124,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Elekid",
+      "pokedex_number": 239,
+      "evolves_to": [
+        {
+          "pokemon": "Electabuzz",
+          "pokedex_number": 125,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Magby",
+      "pokedex_number": 240,
+      "evolves_to": [
+        {
+          "pokemon": "Magmar",
+          "pokedex_number": 126,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Miltank",
+      "pokedex_number": 241,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Blissey",
+      "pokedex_number": 242,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Raikou",
+      "pokedex_number": 243,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Entei",
+      "pokedex_number": 244,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Suicune",
+      "pokedex_number": 245,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Larvitar",
+      "pokedex_number": 246,
+      "evolves_to": [
+        {
+          "pokemon": "Pupitar",
+          "pokedex_number": 247,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Pupitar",
+      "pokedex_number": 247,
+      "evolves_to": [
+        {
+          "pokemon": "Tyranitar",
+          "pokedex_number": 248,
+          "method": "level",
+          "level": 55
+        }
+      ]
+    },
+    {
+      "pokemon": "Tyranitar",
+      "pokedex_number": 248,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Lugia",
+      "pokedex_number": 249,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Ho-Oh",
+      "pokedex_number": 250,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Celebi",
+      "pokedex_number": 251,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Treecko",
+      "pokedex_number": 252,
+      "evolves_to": [
+        {
+          "pokemon": "Grovyle",
+          "pokedex_number": 253,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Grovyle",
+      "pokedex_number": 253,
+      "evolves_to": [
+        {
+          "pokemon": "Sceptile",
+          "pokedex_number": 254,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Sceptile",
+      "pokedex_number": 254,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Torchic",
+      "pokedex_number": 255,
+      "evolves_to": [
+        {
+          "pokemon": "Combusken",
+          "pokedex_number": 256,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Combusken",
+      "pokedex_number": 256,
+      "evolves_to": [
+        {
+          "pokemon": "Blaziken",
+          "pokedex_number": 257,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Blaziken",
+      "pokedex_number": 257,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mudkip",
+      "pokedex_number": 258,
+      "evolves_to": [
+        {
+          "pokemon": "Marshtomp",
+          "pokedex_number": 259,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Marshtomp",
+      "pokedex_number": 259,
+      "evolves_to": [
+        {
+          "pokemon": "Swampert",
+          "pokedex_number": 260,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Swampert",
+      "pokedex_number": 260,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Poochyena",
+      "pokedex_number": 261,
+      "evolves_to": [
+        {
+          "pokemon": "Mightyena",
+          "pokedex_number": 262,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Mightyena",
+      "pokedex_number": 262,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Zigzagoon",
+      "pokedex_number": 263,
+      "evolves_to": [
+        {
+          "pokemon": "Linoone",
+          "pokedex_number": 264,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Linoone",
+      "pokedex_number": 264,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Wurmple",
+      "pokedex_number": 265,
+      "evolves_to": [
+        {
+          "pokemon": "Silcoon",
+          "pokedex_number": 266,
+          "method": "level",
+          "level": 7
+        },
+        {
+          "pokemon": "Cascoon",
+          "pokedex_number": 268,
+          "method": "level",
+          "level": 7
+        }
+      ]
+    },
+    {
+      "pokemon": "Silcoon",
+      "pokedex_number": 266,
+      "evolves_to": [
+        {
+          "pokemon": "Beautifly",
+          "pokedex_number": 267,
+          "method": "level",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "pokemon": "Beautifly",
+      "pokedex_number": 267,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Cascoon",
+      "pokedex_number": 268,
+      "evolves_to": [
+        {
+          "pokemon": "Dustox",
+          "pokedex_number": 269,
+          "method": "level",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "pokemon": "Dustox",
+      "pokedex_number": 269,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Lotad",
+      "pokedex_number": 270,
+      "evolves_to": [
+        {
+          "pokemon": "Lombre",
+          "pokedex_number": 271,
+          "method": "level",
+          "level": 14
+        }
+      ]
+    },
+    {
+      "pokemon": "Lombre",
+      "pokedex_number": 271,
+      "evolves_to": [
+        {
+          "pokemon": "Ludicolo",
+          "pokedex_number": 272,
+          "method": "item",
+          "item": "WaterStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Ludicolo",
+      "pokedex_number": 272,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Seedot",
+      "pokedex_number": 273,
+      "evolves_to": [
+        {
+          "pokemon": "Nuzleaf",
+          "pokedex_number": 274,
+          "method": "level",
+          "level": 14
+        }
+      ]
+    },
+    {
+      "pokemon": "Nuzleaf",
+      "pokedex_number": 274,
+      "evolves_to": [
+        {
+          "pokemon": "Shiftry",
+          "pokedex_number": 275,
+          "method": "item",
+          "item": "LeafStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Shiftry",
+      "pokedex_number": 275,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Taillow",
+      "pokedex_number": 276,
+      "evolves_to": [
+        {
+          "pokemon": "Swellow",
+          "pokedex_number": 277,
+          "method": "level",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "pokemon": "Swellow",
+      "pokedex_number": 277,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Wingull",
+      "pokedex_number": 278,
+      "evolves_to": [
+        {
+          "pokemon": "Pelipper",
+          "pokedex_number": 279,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Pelipper",
+      "pokedex_number": 279,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Ralts",
+      "pokedex_number": 280,
+      "evolves_to": [
+        {
+          "pokemon": "Kirlia",
+          "pokedex_number": 281,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Kirlia",
+      "pokedex_number": 281,
+      "evolves_to": [
+        {
+          "pokemon": "Gardevoir",
+          "pokedex_number": 282,
+          "method": "level",
+          "level": 30
+        },
+        {
+          "pokemon": "Gallade",
+          "pokedex_number": 475,
+          "method": "item",
+          "item": "DawnStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Gardevoir",
+      "pokedex_number": 282,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Surskit",
+      "pokedex_number": 283,
+      "evolves_to": [
+        {
+          "pokemon": "Masquerain",
+          "pokedex_number": 284,
+          "method": "level",
+          "level": 22
+        }
+      ]
+    },
+    {
+      "pokemon": "Masquerain",
+      "pokedex_number": 284,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shroomish",
+      "pokedex_number": 285,
+      "evolves_to": [
+        {
+          "pokemon": "Breloom",
+          "pokedex_number": 286,
+          "method": "level",
+          "level": 23
+        }
+      ]
+    },
+    {
+      "pokemon": "Breloom",
+      "pokedex_number": 286,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Slakoth",
+      "pokedex_number": 287,
+      "evolves_to": [
+        {
+          "pokemon": "Vigoroth",
+          "pokedex_number": 288,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Vigoroth",
+      "pokedex_number": 288,
+      "evolves_to": [
+        {
+          "pokemon": "Slaking",
+          "pokedex_number": 289,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Slaking",
+      "pokedex_number": 289,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Nincada",
+      "pokedex_number": 290,
+      "evolves_to": [
+        {
+          "pokemon": "Ninjask",
+          "pokedex_number": 291,
+          "method": "level",
+          "level": 20
+        },
+        {
+          "pokemon": "Shedinja",
+          "pokedex_number": 292,
+          "method": "shed"
+        }
+      ]
+    },
+    {
+      "pokemon": "Ninjask",
+      "pokedex_number": 291,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shedinja",
+      "pokedex_number": 292,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Whismur",
+      "pokedex_number": 293,
+      "evolves_to": [
+        {
+          "pokemon": "Loudred",
+          "pokedex_number": 294,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Loudred",
+      "pokedex_number": 294,
+      "evolves_to": [
+        {
+          "pokemon": "Exploud",
+          "pokedex_number": 295,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Exploud",
+      "pokedex_number": 295,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Makuhita",
+      "pokedex_number": 296,
+      "evolves_to": [
+        {
+          "pokemon": "Hariyama",
+          "pokedex_number": 297,
+          "method": "level",
+          "level": 24
+        }
+      ]
+    },
+    {
+      "pokemon": "Hariyama",
+      "pokedex_number": 297,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Azurill",
+      "pokedex_number": 298,
+      "evolves_to": [
+        {
+          "pokemon": "Marill",
+          "pokedex_number": 183,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Nosepass",
+      "pokedex_number": 299,
+      "evolves_to": [
+        {
+          "pokemon": "Probopass",
+          "pokedex_number": 476,
+          "method": "location"
+        }
+      ]
+    },
+    {
+      "pokemon": "Skitty",
+      "pokedex_number": 300,
+      "evolves_to": [
+        {
+          "pokemon": "Delcatty",
+          "pokedex_number": 301,
+          "method": "item",
+          "item": "MoonStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Delcatty",
+      "pokedex_number": 301,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Sableye",
+      "pokedex_number": 302,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mawile",
+      "pokedex_number": 303,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Aron",
+      "pokedex_number": 304,
+      "evolves_to": [
+        {
+          "pokemon": "Lairon",
+          "pokedex_number": 305,
+          "method": "level",
+          "level": 24
+        }
+      ]
+    },
+    {
+      "pokemon": "Lairon",
+      "pokedex_number": 305,
+      "evolves_to": [
+        {
+          "pokemon": "Aggron",
+          "pokedex_number": 306,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Aggron",
+      "pokedex_number": 306,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Meditite",
+      "pokedex_number": 307,
+      "evolves_to": [
+        {
+          "pokemon": "Medicham",
+          "pokedex_number": 308,
+          "method": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "pokemon": "Medicham",
+      "pokedex_number": 308,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Electrike",
+      "pokedex_number": 309,
+      "evolves_to": [
+        {
+          "pokemon": "Manectric",
+          "pokedex_number": 310,
+          "method": "level",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "pokemon": "Manectric",
+      "pokedex_number": 310,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Plusle",
+      "pokedex_number": 311,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Minun",
+      "pokedex_number": 312,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Volbeat",
+      "pokedex_number": 313,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Illumise",
+      "pokedex_number": 314,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Roselia",
+      "pokedex_number": 315,
+      "evolves_to": [
+        {
+          "pokemon": "Roserade",
+          "pokedex_number": 407,
+          "method": "item",
+          "item": "ShinyStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Gulpin",
+      "pokedex_number": 316,
+      "evolves_to": [
+        {
+          "pokemon": "Swalot",
+          "pokedex_number": 317,
+          "method": "level",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "pokemon": "Swalot",
+      "pokedex_number": 317,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Carvanha",
+      "pokedex_number": 318,
+      "evolves_to": [
+        {
+          "pokemon": "Sharpedo",
+          "pokedex_number": 319,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Sharpedo",
+      "pokedex_number": 319,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Wailmer",
+      "pokedex_number": 320,
+      "evolves_to": [
+        {
+          "pokemon": "Wailord",
+          "pokedex_number": 321,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Wailord",
+      "pokedex_number": 321,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Numel",
+      "pokedex_number": 322,
+      "evolves_to": [
+        {
+          "pokemon": "Camerupt",
+          "pokedex_number": 323,
+          "method": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "pokemon": "Camerupt",
+      "pokedex_number": 323,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Torkoal",
+      "pokedex_number": 324,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Spoink",
+      "pokedex_number": 325,
+      "evolves_to": [
+        {
+          "pokemon": "Grumpig",
+          "pokedex_number": 326,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Grumpig",
+      "pokedex_number": 326,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Spinda",
+      "pokedex_number": 327,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Trapinch",
+      "pokedex_number": 328,
+      "evolves_to": [
+        {
+          "pokemon": "Vibrava",
+          "pokedex_number": 329,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Vibrava",
+      "pokedex_number": 329,
+      "evolves_to": [
+        {
+          "pokemon": "Flygon",
+          "pokedex_number": 330,
+          "method": "level",
+          "level": 45
+        }
+      ]
+    },
+    {
+      "pokemon": "Flygon",
+      "pokedex_number": 330,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Cacnea",
+      "pokedex_number": 331,
+      "evolves_to": [
+        {
+          "pokemon": "Cacturne",
+          "pokedex_number": 332,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Cacturne",
+      "pokedex_number": 332,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Swablu",
+      "pokedex_number": 333,
+      "evolves_to": [
+        {
+          "pokemon": "Altaria",
+          "pokedex_number": 334,
+          "method": "level",
+          "level": 35
+        }
+      ]
+    },
+    {
+      "pokemon": "Altaria",
+      "pokedex_number": 334,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Zangoose",
+      "pokedex_number": 335,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Seviper",
+      "pokedex_number": 336,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Lunatone",
+      "pokedex_number": 337,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Solrock",
+      "pokedex_number": 338,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Barboach",
+      "pokedex_number": 339,
+      "evolves_to": [
+        {
+          "pokemon": "Whiscash",
+          "pokedex_number": 340,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Whiscash",
+      "pokedex_number": 340,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Corphish",
+      "pokedex_number": 341,
+      "evolves_to": [
+        {
+          "pokemon": "Crawdaunt",
+          "pokedex_number": 342,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Crawdaunt",
+      "pokedex_number": 342,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Baltoy",
+      "pokedex_number": 343,
+      "evolves_to": [
+        {
+          "pokemon": "Claydol",
+          "pokedex_number": 344,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Claydol",
+      "pokedex_number": 344,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Lileep",
+      "pokedex_number": 345,
+      "evolves_to": [
+        {
+          "pokemon": "Cradily",
+          "pokedex_number": 346,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Cradily",
+      "pokedex_number": 346,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Anorith",
+      "pokedex_number": 347,
+      "evolves_to": [
+        {
+          "pokemon": "Armaldo",
+          "pokedex_number": 348,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Armaldo",
+      "pokedex_number": 348,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Feebas",
+      "pokedex_number": 349,
+      "evolves_to": [
+        {
+          "pokemon": "Milotic",
+          "pokedex_number": 350,
+          "method": "item",
+          "item": "Prism Scale"
+        }
+      ]
+    },
+    {
+      "pokemon": "Milotic",
+      "pokedex_number": 350,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Castform",
+      "pokedex_number": 351,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Kecleon",
+      "pokedex_number": 352,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shuppet",
+      "pokedex_number": 353,
+      "evolves_to": [
+        {
+          "pokemon": "Banette",
+          "pokedex_number": 354,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Banette",
+      "pokedex_number": 354,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Duskull",
+      "pokedex_number": 355,
+      "evolves_to": [
+        {
+          "pokemon": "Dusclops",
+          "pokedex_number": 356,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Dusclops",
+      "pokedex_number": 356,
+      "evolves_to": [
+        {
+          "pokemon": "Dusknoir",
+          "pokedex_number": 477,
+          "method": "item",
+          "item": "Reaper Cloth"
+        }
+      ]
+    },
+    {
+      "pokemon": "Tropius",
+      "pokedex_number": 357,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Chimecho",
+      "pokedex_number": 358,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Absol",
+      "pokedex_number": 359,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Wynaut",
+      "pokedex_number": 360,
+      "evolves_to": [
+        {
+          "pokemon": "Wobbuffet",
+          "pokedex_number": 202,
+          "method": "level",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "pokemon": "Snorunt",
+      "pokedex_number": 361,
+      "evolves_to": [
+        {
+          "pokemon": "Glalie",
+          "pokedex_number": 362,
+          "method": "level",
+          "level": 32
+        },
+        {
+          "pokemon": "Froslass",
+          "pokedex_number": 478,
+          "method": "item",
+          "item": "DawnStone"
+        }
+      ]
+    },
+    {
+      "pokemon": "Glalie",
+      "pokedex_number": 362,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Spheal",
+      "pokedex_number": 363,
+      "evolves_to": [
+        {
+          "pokemon": "Sealeo",
+          "pokedex_number": 364,
+          "method": "level",
+          "level": 24
+        }
+      ]
+    },
+    {
+      "pokemon": "Sealeo",
+      "pokedex_number": 364,
+      "evolves_to": [
+        {
+          "pokemon": "Walrein",
+          "pokedex_number": 365,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Walrein",
+      "pokedex_number": 365,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Clamperl",
+      "pokedex_number": 366,
+      "evolves_to": [
+        {
+          "pokemon": "Huntail",
+          "pokedex_number": 367,
+          "method": "item",
+          "item": "Deep Sea Tooth"
+        },
+        {
+          "pokemon": "Gorebyss",
+          "pokedex_number": 368,
+          "method": "item",
+          "item": "Deep Sea Scale"
+        }
+      ]
+    },
+    {
+      "pokemon": "Huntail",
+      "pokedex_number": 367,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Gorebyss",
+      "pokedex_number": 368,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Relicanth",
+      "pokedex_number": 369,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Luvdisc",
+      "pokedex_number": 370,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Bagon",
+      "pokedex_number": 371,
+      "evolves_to": [
+        {
+          "pokemon": "Shelgon",
+          "pokedex_number": 372,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Shelgon",
+      "pokedex_number": 372,
+      "evolves_to": [
+        {
+          "pokemon": "Salamence",
+          "pokedex_number": 373,
+          "method": "level",
+          "level": 50
+        }
+      ]
+    },
+    {
+      "pokemon": "Salamence",
+      "pokedex_number": 373,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Beldum",
+      "pokedex_number": 374,
+      "evolves_to": [
+        {
+          "pokemon": "Metang",
+          "pokedex_number": 375,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Metang",
+      "pokedex_number": 375,
+      "evolves_to": [
+        {
+          "pokemon": "Metagross",
+          "pokedex_number": 376,
+          "method": "level",
+          "level": 45
+        }
+      ]
+    },
+    {
+      "pokemon": "Metagross",
+      "pokedex_number": 376,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Regirock",
+      "pokedex_number": 377,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Regice",
+      "pokedex_number": 378,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Registeel",
+      "pokedex_number": 379,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Latias",
+      "pokedex_number": 380,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Latios",
+      "pokedex_number": 381,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Kyogre",
+      "pokedex_number": 382,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Groudon",
+      "pokedex_number": 383,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Rayquaza",
+      "pokedex_number": 384,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Jirachi",
+      "pokedex_number": 385,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Deoxys",
+      "pokedex_number": 386,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Turtwig",
+      "pokedex_number": 387,
+      "evolves_to": [
+        {
+          "pokemon": "Grotle",
+          "pokedex_number": 388,
+          "method": "level",
+          "level": 18
+        }
+      ]
+    },
+    {
+      "pokemon": "Grotle",
+      "pokedex_number": 388,
+      "evolves_to": [
+        {
+          "pokemon": "Torterra",
+          "pokedex_number": 389,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Torterra",
+      "pokedex_number": 389,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Chimchar",
+      "pokedex_number": 390,
+      "evolves_to": [
+        {
+          "pokemon": "Monferno",
+          "pokedex_number": 391,
+          "method": "level",
+          "level": 14
+        }
+      ]
+    },
+    {
+      "pokemon": "Monferno",
+      "pokedex_number": 391,
+      "evolves_to": [
+        {
+          "pokemon": "Infernape",
+          "pokedex_number": 392,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Infernape",
+      "pokedex_number": 392,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Piplup",
+      "pokedex_number": 393,
+      "evolves_to": [
+        {
+          "pokemon": "Prinplup",
+          "pokedex_number": 394,
+          "method": "level",
+          "level": 16
+        }
+      ]
+    },
+    {
+      "pokemon": "Prinplup",
+      "pokedex_number": 394,
+      "evolves_to": [
+        {
+          "pokemon": "Empoleon",
+          "pokedex_number": 395,
+          "method": "level",
+          "level": 36
+        }
+      ]
+    },
+    {
+      "pokemon": "Empoleon",
+      "pokedex_number": 395,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Starly",
+      "pokedex_number": 396,
+      "evolves_to": [
+        {
+          "pokemon": "Staravia",
+          "pokedex_number": 397,
+          "method": "level",
+          "level": 14
+        }
+      ]
+    },
+    {
+      "pokemon": "Staravia",
+      "pokedex_number": 397,
+      "evolves_to": [
+        {
+          "pokemon": "Staraptor",
+          "pokedex_number": 398,
+          "method": "level",
+          "level": 34
+        }
+      ]
+    },
+    {
+      "pokemon": "Staraptor",
+      "pokedex_number": 398,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Bidoof",
+      "pokedex_number": 399,
+      "evolves_to": [
+        {
+          "pokemon": "Bibarel",
+          "pokedex_number": 400,
+          "method": "level",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "pokemon": "Bibarel",
+      "pokedex_number": 400,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Kricketot",
+      "pokedex_number": 401,
+      "evolves_to": [
+        {
+          "pokemon": "Kricketune",
+          "pokedex_number": 402,
+          "method": "level",
+          "level": 10
+        }
+      ]
+    },
+    {
+      "pokemon": "Kricketune",
+      "pokedex_number": 402,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shinx",
+      "pokedex_number": 403,
+      "evolves_to": [
+        {
+          "pokemon": "Luxio",
+          "pokedex_number": 404,
+          "method": "level",
+          "level": 15
+        }
+      ]
+    },
+    {
+      "pokemon": "Luxio",
+      "pokedex_number": 404,
+      "evolves_to": [
+        {
+          "pokemon": "Luxray",
+          "pokedex_number": 405,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Luxray",
+      "pokedex_number": 405,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Budew",
+      "pokedex_number": 406,
+      "evolves_to": [
+        {
+          "pokemon": "Roselia",
+          "pokedex_number": 315,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Roserade",
+      "pokedex_number": 407,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Cranidos",
+      "pokedex_number": 408,
+      "evolves_to": [
+        {
+          "pokemon": "Rampardos",
+          "pokedex_number": 409,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Rampardos",
+      "pokedex_number": 409,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shieldon",
+      "pokedex_number": 410,
+      "evolves_to": [
+        {
+          "pokemon": "Bastiodon",
+          "pokedex_number": 411,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Bastiodon",
+      "pokedex_number": 411,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Burmy",
+      "pokedex_number": 412,
+      "evolves_to": [
+        {
+          "pokemon": "Wormadam",
+          "pokedex_number": 413,
+          "method": "level",
+          "level": 20
+        },
+        {
+          "pokemon": "Mothim",
+          "pokedex_number": 414,
+          "method": "level",
+          "level": 20
+        }
+      ]
+    },
+    {
+      "pokemon": "Wormadam",
+      "pokedex_number": 413,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mothim",
+      "pokedex_number": 414,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Combee",
+      "pokedex_number": 415,
+      "evolves_to": [
+        {
+          "pokemon": "Vespiquen",
+          "pokedex_number": 416,
+          "method": "level",
+          "level": 21
+        }
+      ]
+    },
+    {
+      "pokemon": "Vespiquen",
+      "pokedex_number": 416,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Pachirisu",
+      "pokedex_number": 417,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Buizel",
+      "pokedex_number": 418,
+      "evolves_to": [
+        {
+          "pokemon": "Floatzel",
+          "pokedex_number": 419,
+          "method": "level",
+          "level": 26
+        }
+      ]
+    },
+    {
+      "pokemon": "Floatzel",
+      "pokedex_number": 419,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Cherubi",
+      "pokedex_number": 420,
+      "evolves_to": [
+        {
+          "pokemon": "Cherrim",
+          "pokedex_number": 421,
+          "method": "level",
+          "level": 25
+        }
+      ]
+    },
+    {
+      "pokemon": "Cherrim",
+      "pokedex_number": 421,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shellos",
+      "pokedex_number": 422,
+      "evolves_to": [
+        {
+          "pokemon": "Gastrodon",
+          "pokedex_number": 423,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Gastrodon",
+      "pokedex_number": 423,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Ambipom",
+      "pokedex_number": 424,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Drifloon",
+      "pokedex_number": 425,
+      "evolves_to": [
+        {
+          "pokemon": "Drifblim",
+          "pokedex_number": 426,
+          "method": "level",
+          "level": 28
+        }
+      ]
+    },
+    {
+      "pokemon": "Drifblim",
+      "pokedex_number": 426,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Buneary",
+      "pokedex_number": 427,
+      "evolves_to": [
+        {
+          "pokemon": "Lopunny",
+          "pokedex_number": 428,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Lopunny",
+      "pokedex_number": 428,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mismagius",
+      "pokedex_number": 429,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Honchkrow",
+      "pokedex_number": 430,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Glameow",
+      "pokedex_number": 431,
+      "evolves_to": [
+        {
+          "pokemon": "Purugly",
+          "pokedex_number": 432,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Purugly",
+      "pokedex_number": 432,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Chingling",
+      "pokedex_number": 433,
+      "evolves_to": [
+        {
+          "pokemon": "Chimecho",
+          "pokedex_number": 358,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Stunky",
+      "pokedex_number": 434,
+      "evolves_to": [
+        {
+          "pokemon": "Skuntank",
+          "pokedex_number": 435,
+          "method": "level",
+          "level": 32
+        }
+      ]
+    },
+    {
+      "pokemon": "Skuntank",
+      "pokedex_number": 435,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Bronzor",
+      "pokedex_number": 436,
+      "evolves_to": [
+        {
+          "pokemon": "Bronzong",
+          "pokedex_number": 437,
+          "method": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "pokemon": "Bronzong",
+      "pokedex_number": 437,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Bonsly",
+      "pokedex_number": 438,
+      "evolves_to": [
+        {
+          "pokemon": "Sudowoodo",
+          "pokedex_number": 185,
+          "method": "move",
+          "move": "mimic"
+        }
+      ]
+    },
+    {
+      "pokemon": "Mime Jr.",
+      "pokedex_number": 439,
+      "evolves_to": [
+        {
+          "pokemon": "Mr. Mime",
+          "pokedex_number": 122,
+          "method": "move",
+          "move": "mimic"
+        }
+      ]
+    },
+    {
+      "pokemon": "Happiny",
+      "pokedex_number": 440,
+      "evolves_to": [
+        {
+          "pokemon": "Chansey",
+          "pokedex_number": 113,
+          "method": "happiness",
+          "time": "day"
+        }
+      ]
+    },
+    {
+      "pokemon": "Chatot",
+      "pokedex_number": 441,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Spiritomb",
+      "pokedex_number": 442,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Gible",
+      "pokedex_number": 443,
+      "evolves_to": [
+        {
+          "pokemon": "Gabite",
+          "pokedex_number": 444,
+          "method": "level",
+          "level": 24
+        }
+      ]
+    },
+    {
+      "pokemon": "Gabite",
+      "pokedex_number": 444,
+      "evolves_to": [
+        {
+          "pokemon": "Garchomp",
+          "pokedex_number": 445,
+          "method": "level",
+          "level": 48
+        }
+      ]
+    },
+    {
+      "pokemon": "Garchomp",
+      "pokedex_number": 445,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Munchlax",
+      "pokedex_number": 446,
+      "evolves_to": [
+        {
+          "pokemon": "Snorlax",
+          "pokedex_number": 143,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Riolu",
+      "pokedex_number": 447,
+      "evolves_to": [
+        {
+          "pokemon": "Lucario",
+          "pokedex_number": 448,
+          "method": "happiness"
+        }
+      ]
+    },
+    {
+      "pokemon": "Lucario",
+      "pokedex_number": 448,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Hippopotas",
+      "pokedex_number": 449,
+      "evolves_to": [
+        {
+          "pokemon": "Hippowdon",
+          "pokedex_number": 450,
+          "method": "level",
+          "level": 34
+        }
+      ]
+    },
+    {
+      "pokemon": "Hippowdon",
+      "pokedex_number": 450,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Skorupi",
+      "pokedex_number": 451,
+      "evolves_to": [
+        {
+          "pokemon": "Drapion",
+          "pokedex_number": 452,
+          "method": "level",
+          "level": 30
+        }
+      ]
+    },
+    {
+      "pokemon": "Drapion",
+      "pokedex_number": 452,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Croagunk",
+      "pokedex_number": 453,
+      "evolves_to": [
+        {
+          "pokemon": "Toxicroak",
+          "pokedex_number": 454,
+          "method": "level",
+          "level": 33
+        }
+      ]
+    },
+    {
+      "pokemon": "Toxicroak",
+      "pokedex_number": 454,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Carnivine",
+      "pokedex_number": 455,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Finneon",
+      "pokedex_number": 456,
+      "evolves_to": [
+        {
+          "pokemon": "Lumineon",
+          "pokedex_number": 457,
+          "method": "level",
+          "level": 31
+        }
+      ]
+    },
+    {
+      "pokemon": "Lumineon",
+      "pokedex_number": 457,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mantyke",
+      "pokedex_number": 458,
+      "evolves_to": [
+        {
+          "pokemon": "Mantine",
+          "pokedex_number": 226,
+          "method": "level"
+        }
+      ]
+    },
+    {
+      "pokemon": "Snover",
+      "pokedex_number": 459,
+      "evolves_to": [
+        {
+          "pokemon": "Abomasnow",
+          "pokedex_number": 460,
+          "method": "level",
+          "level": 40
+        }
+      ]
+    },
+    {
+      "pokemon": "Abomasnow",
+      "pokedex_number": 460,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Weavile",
+      "pokedex_number": 461,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Magnezone",
+      "pokedex_number": 462,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Lickilicky",
+      "pokedex_number": 463,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Rhyperior",
+      "pokedex_number": 464,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Tangrowth",
+      "pokedex_number": 465,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Electivire",
+      "pokedex_number": 466,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Magmortar",
+      "pokedex_number": 467,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Togekiss",
+      "pokedex_number": 468,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Yanmega",
+      "pokedex_number": 469,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Leafeon",
+      "pokedex_number": 470,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Glaceon",
+      "pokedex_number": 471,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Gliscor",
+      "pokedex_number": 472,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mamoswine",
+      "pokedex_number": 473,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Porygon-Z",
+      "pokedex_number": 474,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Gallade",
+      "pokedex_number": 475,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Probopass",
+      "pokedex_number": 476,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Dusknoir",
+      "pokedex_number": 477,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Froslass",
+      "pokedex_number": 478,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Rotom",
+      "pokedex_number": 479,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Uxie",
+      "pokedex_number": 480,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Mesprit",
+      "pokedex_number": 481,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Azelf",
+      "pokedex_number": 482,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Dialga",
+      "pokedex_number": 483,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Palkia",
+      "pokedex_number": 484,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Heatran",
+      "pokedex_number": 485,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Regigigas",
+      "pokedex_number": 486,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Giratina",
+      "pokedex_number": 487,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Cresselia",
+      "pokedex_number": 488,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Phione",
+      "pokedex_number": 489,
+      "evolves_to": [
+        {
+          "pokemon": "Manaphy",
+          "pokedex_number": 490,
+          "method": "unknown"
+        }
+      ]
+    },
+    {
+      "pokemon": "Manaphy",
+      "pokedex_number": 490,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Darkrai",
+      "pokedex_number": 491,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Shaymin",
+      "pokedex_number": 492,
+      "evolves_to": []
+    },
+    {
+      "pokemon": "Arceus",
+      "pokedex_number": 493,
+      "evolves_to": []
+    }
+  ]
+}
