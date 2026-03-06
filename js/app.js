@@ -1592,6 +1592,9 @@ function attachTooltipListeners() {
 // Initial call
 setTimeout(attachTooltipListeners, 1000);
 
+// Attach import file listener
+document.getElementById('import-file')?.addEventListener('change', importData);
+
 // Call after DOM updates
 const originalRenderArea = typeof renderArea === 'function' ? renderArea : null;
 
