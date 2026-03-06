@@ -107,6 +107,85 @@ function saveTabState() {
     }));
 }
 
+// Export tracking data to JSON file
+function exportData() {
+    const exportObj = {
+        gameId: gameId,
+        exportedAt: new Date().toISOString(),
+        trackingState: trackingState,
+        currentAreaIndex: currentAreaIndex,
+        tabs: {
+            method: activeMethodTabs,
+            walking: activeWalkingTabs
+        }
+    };
+    
+    const dataStr = JSON.stringify(exportObj, null, 2);
+    const blob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `pokemon-livedex-${gameId}-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// Import tracking data from JSON file
+function importData(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        try {
+            const importObj = JSON.parse(e.target.result);
+            
+            // Validate it's for the same game
+            if (importObj.gameId && importObj.gameId !== gameId) {
+                if (!confirm(`This save is for "${importObj.gameId}" but you're playing "${gameId}". Import anyway?`)) {
+                    return;
+                }
+            }
+            
+            // Import tracking state
+            if (importObj.trackingState) {
+                trackingState = importObj.trackingState;
+                saveTrackingState();
+            }
+            
+            // Import area index
+            if (typeof importObj.currentAreaIndex === 'number') {
+                currentAreaIndex = importObj.currentAreaIndex;
+                saveAreaIndex();
+            }
+            
+            // Import tab states
+            if (importObj.tabs) {
+                if (importObj.tabs.method) activeMethodTabs = importObj.tabs.method;
+                if (importObj.tabs.walking) activeWalkingTabs = importObj.tabs.walking;
+                saveTabState();
+            }
+            
+            // Refresh the view
+            renderCarousel();
+            renderPCBox();
+            renderMobilePCBox();
+            
+            alert('Import successful!');
+        } catch (err) {
+            alert('Failed to import: Invalid file format');
+            console.error('Import error:', err);
+        }
+    };
+    reader.readAsText(file);
+    
+    // Reset the input so the same file can be imported again
+    event.target.value = '';
+}
+
 // Get Pokemon tracking state
 function getPokemonState(pokedexNum) {
     return trackingState[pokedexNum] || { count: 0 };

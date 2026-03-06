@@ -64,6 +64,21 @@
             <nav id="area-list" class="p-2 overflow-y-auto scrollbar-thin flex-1">
                 <!-- Areas populated by JS -->
             </nav>
+            <div class="p-3 border-t border-gray-200 dark:border-gray-700 flex gap-2">
+                <button onclick="exportData()" class="flex-1 px-3 py-2 text-sm font-medium bg-pokemon-blue text-white hover:bg-blue-600 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                    </svg>
+                    Export
+                </button>
+                <button onclick="document.getElementById('import-file').click()" class="flex-1 px-3 py-2 text-sm font-medium bg-pokemon-blue text-white hover:bg-blue-600 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                    </svg>
+                    Import
+                </button>
+                <input type="file" id="import-file" accept=".json" onchange="importData(event)" class="hidden">
+            </div>
         </aside>
 
         <!-- Main Content Area (3/4 on desktop) -->
@@ -164,6 +179,20 @@
                     </svg>
                 </button>
             </div>
+        </div>
+        <div class="p-3 flex gap-2 bg-pokemon-red">
+            <button onclick="exportData()" class="flex-1 px-3 py-2 text-sm font-medium bg-white text-pokemon-red hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                </svg>
+                Export
+            </button>
+            <button onclick="document.getElementById('import-file').click()" class="flex-1 px-3 py-2 text-sm font-medium bg-white text-pokemon-red hover:bg-gray-100 rounded-lg transition-colors flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Import
+            </button>
         </div>
         <div class="p-2">
             <input 
